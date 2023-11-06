@@ -1,47 +1,43 @@
 // components/GameScreen.js
 import React, { useState, useEffect } from 'react';
 import TextDisplay from './TextDisplay';
-
-// Assuming your questions are an array of objects with `question` (LaTeX string) and `solution` fields
-const questionsWithSolutions = [
-  {
-    question: "3+2",
-    solution: "5",
-  },
-  {
-    question: "\\sqrt{4}",
-    solution: "2",
-  },
-  // ... more questions and solutions
-];
+import generateQuestionsWithSolutions from './utils/generateQuestions'; // adjust the import path as necessary
 
 const GameScreen = ({ endGame, timeLimit, questionLimit }) => {
   const [currentQuestion, setCurrentQuestion] = useState({});
   const [userInput, setUserInput] = useState('');
-  const [timer, setTimer] = useState(timeLimit);
+  const [timer, setTimer] = useState(timeLimit * 60); // Assuming timeLimit is in minutes
   const [score, setScore] = useState(0);
   const [questionCount, setQuestionCount] = useState(0);
   const [answers, setAnswers] = useState([]);
+  const [questionsWithSolutions, setQuestionsWithSolutions] = useState([]);
+
+  // Generate questions on component mount
+  useEffect(() => {
+    setQuestionsWithSolutions(generateQuestionsWithSolutions(questionLimit));
+  }, [questionLimit]);
 
   // Timer logic
   useEffect(() => {
+    let interval = null;
     if (timer > 0 && questionCount < questionLimit) {
-      const interval = setInterval(() => {
+      interval = setInterval(() => {
         setTimer(prev => prev - 1);
       }, 1000);
-      return () => clearInterval(interval);
     } else {
+      clearInterval(interval);
       endGame(score, answers);
     }
+    return () => clearInterval(interval);
   }, [timer, questionCount, questionLimit, endGame, score, answers]);
 
-  // Random question logic
+  // Random question logic, updated to work with generated questions
   useEffect(() => {
-    if (questionCount < questionLimit) {
+    if (questionCount < questionLimit && questionsWithSolutions.length > 0) {
       const randomIndex = Math.floor(Math.random() * questionsWithSolutions.length);
       setCurrentQuestion(questionsWithSolutions[randomIndex]);
     }
-  }, [questionCount, questionLimit]);
+  }, [questionCount, questionLimit, questionsWithSolutions]);
 
   const handleInputChange = (e) => {
     setUserInput(e.target.value);
@@ -49,7 +45,10 @@ const GameScreen = ({ endGame, timeLimit, questionLimit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const matched = userInput.trim().toLowerCase() === currentQuestion.solution.toLowerCase();
+    console.log("checking match")
+    console.log(userInput)
+    console.log(currentQuestion.solution)
+    const matched = userInput.trim() === currentQuestion.solution
     const updatedScore = matched ? score + 5 : score - 7;
     setAnswers([...answers, { ...currentQuestion, userInput: userInput.trim(), matched }]);
     setScore(updatedScore);
@@ -59,11 +58,13 @@ const GameScreen = ({ endGame, timeLimit, questionLimit }) => {
 
   return (
     <div>
-      <h2>Time Remaining: {Math.floor(timer / 60)}:{('0' + (timer % 60)).slice(-2)}</h2>
-      <div>
-        {/* Render the LaTeX question here */}
-        <TextDisplay text={currentQuestion.question || ''} />
-      </div>
+      <h2>Time Remaining: {`${Math.floor(timer / 60)}:${('0' + (timer % 60)).slice(-2)}`}</h2>
+      {currentQuestion.question && (
+        <div>
+          {/* Render the LaTeX question here */}
+          <TextDisplay text={currentQuestion.question} />
+        </div>
+      )}
       <form onSubmit={handleSubmit}>
         <input type="text" value={userInput} onChange={handleInputChange} autoFocus />
         <button type="submit">Enter</button>
