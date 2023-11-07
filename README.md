@@ -9,6 +9,7 @@ My goal is to have a webapp where to students can practice their number sense an
 ## Short Term Goals
 - Piece out the components a bit more. It appears that we will need different SkillPracticeScreens for each section.
 - Piece out the generator functions into different folders.
+    - As of now they are in different files but maybe it would be worth separating into folders for each section in utils.
 - Not-so-ugly front-end UI. Nothing special, just enough that it doesn't hurt the eyes
     - This includes compatability with mobile devices.
 - A fully functioning webapp to generate an exam with **most** of the popular exam questions.
@@ -39,5 +40,8 @@ I split the types of questions into different sections for clarity.
 - division by 11, 111 etc, these require special cases.
 - multiplication by powers of 11.
 - double and half trick
-- multiplying equidistant numbers
+- multiplying equidistant numbers from a third number
 - multiplying reverses
+- Special case factoring trick
+    - Honestly, this one pops up sufficiently often but it is non-trivial to code so it'll be for later...
+- Multiplying two numbers ending in 5.

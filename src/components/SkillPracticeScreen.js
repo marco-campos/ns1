@@ -1,7 +1,7 @@
 // components/SkillPracticeScreen.js
 import React, { useState, useEffect, useCallback } from 'react';
 import TextDisplay from './TextDisplay';
-import { foil2x2, foil2x3, foil3x3, multiply11, multiply111, multiply101, multiply25, multiply75, multiplyNear100, squaresEnd5, squares4159 } from './utils/generateQuestions';
+import { foil2x2, foil2x3, foil3x3, multiply11, multiply111, multiply101, multiply25, multiply75, multiplyNear100, squaresEnd5, squares4159 } from './utils/section1a';
 
 const SkillPracticeScreen = ({ endPractice, skillType }) => {
   const [currentQuestion, setCurrentQuestion] = useState(null);
