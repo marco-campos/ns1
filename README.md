@@ -33,6 +33,9 @@ I split the types of questions into different sections for clarity.
  - Multiplying numbers near 100
  - squares ending in 5
  - squares from 41 to 59.
+ - Several factoring problems
+ - sum of consecutive squares
+ - difference of squares
 
 ## Types of questions skipped (these are rare, will probably add later)
 - division by 25, 75, 50, etc.
