@@ -5,6 +5,8 @@ This project is largely inspired by Bryant Heath's wonderful book on [Number Sen
 My goal is to have a webapp where to students can practice their number sense anywhere they go. For now, I am just generating the questions/answer keys based on functions designed to generate the types of popular questions that you may see in a number sense exam.
 
 ## Short Term Goals
+- Piece out the components a bit more. It appears that we will need different SkillPracticeScreens for each section.
+- Piece out the generator functions into different folders.
 - Not-so-ugly front-end UI. Nothing special, just enough that it doesn't hurt the eyes
     - This includes compatability with mobile devices.
 - A fully functioning webapp to generate an exam with **most** of the popular exam questions.
@@ -27,6 +29,7 @@ I split the types of questions into different sections for clarity.
  - multiply75
  - Multiplying numbers near 100
  - squares ending in 5
+ - squares from 41 to 59.
 
 ## Types of questions skipped (these are rare, will probably add later)
 - division by 25, 75, 50, etc.
