@@ -25,9 +25,14 @@ I split the types of questions into different sections for clarity.
  - multiply101
  - multiply25
  - multiply75
+ - Multiplying numbers near 100
+ - squares ending in 5
 
 ## Types of questions skipped (these are rare, will probably add later)
 - division by 25, 75, 50, etc.
 - fractions of 100, 1000, 10000
 - division by 11, 111 etc, these require special cases.
 - multiplication by powers of 11.
+- double and half trick
+- multiplying equidistant numbers
+- multiplying reverses
