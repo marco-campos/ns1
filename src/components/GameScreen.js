@@ -6,7 +6,7 @@ import generateQuestionsWithSolutions from './utils/generateQuestions'; // adjus
 const GameScreen = ({ endGame, timeLimit, questionLimit }) => {
   const [currentQuestion, setCurrentQuestion] = useState({});
   const [userInput, setUserInput] = useState('');
-  const [timer, setTimer] = useState(timeLimit * 60); // Assuming timeLimit is in minutes
+  const [timer, setTimer] = useState(timeLimit); // Assuming timeLimit is in minutes
   const [score, setScore] = useState(0);
   const [questionCount, setQuestionCount] = useState(0);
   const [answers, setAnswers] = useState([]);
