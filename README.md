@@ -1,6 +1,8 @@
 # Number Sense Trainer
 
-This project is largely inspired by Bryant Heath's wonderful book on [Number Sense tricks](https://bryantheath.com/files/2018/04/Heath_NSTricks_revA.pdf).
+Live link to the netlify app: [Number Sense Practice](https://numbersensetricks.netlify.app/)
+
+This project is largely inspired by [Bryant Heath's wonderful book](https://bryantheath.com/files/2018/04/Heath_NSTricks_revA.pdf).
 
 My goal is to have a webapp where to students can practice their number sense anywhere they go. For now, I am just generating the questions/answer keys based on functions designed to generate the types of popular questions that you may see in a number sense exam.
 
