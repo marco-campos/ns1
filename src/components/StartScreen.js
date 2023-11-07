@@ -20,7 +20,7 @@ const StartScreen = ({ startGame }) => {
 
   return (
     <div>
-      <h1>Welcome to the Typing Game</h1>
+      <h1>Number Sense Practice</h1>
       <div>
         <label htmlFor="time-select">Choose a time limit:</label>
         <select id="time-select" value={timeOption} onChange={handleTimeChange}>
