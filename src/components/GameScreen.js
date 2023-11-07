@@ -31,11 +31,9 @@ const GameScreen = ({ endGame, timeLimit, questionLimit }) => {
     return () => clearInterval(interval);
   }, [timer, questionCount, questionLimit, endGame, score, answers]);
 
-  // Random question logic, updated to work with generated questions
   useEffect(() => {
     if (questionCount < questionLimit && questionsWithSolutions.length > 0) {
-      const randomIndex = Math.floor(Math.random() * questionsWithSolutions.length);
-      setCurrentQuestion(questionsWithSolutions[randomIndex]);
+      setCurrentQuestion(questionsWithSolutions[questionCount]);
     }
   }, [questionCount, questionLimit, questionsWithSolutions]);
 
@@ -45,9 +43,6 @@ const GameScreen = ({ endGame, timeLimit, questionLimit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("checking match")
-    console.log(userInput)
-    console.log(currentQuestion.solution)
     const matched = userInput.trim() === currentQuestion.solution
     const updatedScore = matched ? score + 5 : score - 7;
     setAnswers([...answers, { ...currentQuestion, userInput: userInput.trim(), matched }]);
