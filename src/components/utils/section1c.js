@@ -35,14 +35,31 @@ function mixedToImproper(whole, fracPart, denom) {
 function improperToMixed(numerator, denominator) {
     const wholePart = Math.floor(numerator / denominator);
     const fracPart = numerator % denominator;
-    const mixedString = `${wholePart} ${fracPart}/${denominator}`;
-    return {
-        wholePart: wholePart,
-        fracPart: fracPart,
-        mixedString: mixedString,
-    };
+    if (fracPart === 0) {
+        const mixedString = `${wholePart}`
+        return {
+            wholePart: wholePart,
+            fracPart: fracPart,
+            mixedString: mixedString,
+        };
+    } if (wholePart === 0) {
+        const mixedString = `${fracPart}/${denominator}`;
+        return {
+            wholePart: wholePart,
+            fracPart: fracPart,
+            mixedString: mixedString,
+        };
     }
     
+    else{
+        const mixedString = `${wholePart} ${fracPart}/${denominator}`;
+        return {
+            wholePart: wholePart,
+            fracPart: fracPart,
+            mixedString: mixedString,
+        };
+    }
+}    
 
 export const mixedFoil1 = () => {
     const initialNumber = randomElement([3, 4, 5, 6, 7, 8]);
@@ -67,5 +84,46 @@ export const mixedFoil1 = () => {
         question: question,
         solution: answer,
     };
+};
+
+// Simplify a fraction
+function simplifyFraction(numerator, denominator) {
+    const gcd = (a, b) => b === 0 ? a : gcd(b, a % b);
+    const greatestCommonDivisor = gcd(numerator, denominator);
+    return {
+        numerator: numerator / greatestCommonDivisor,
+        denominator: denominator / greatestCommonDivisor
     };
+    }
+
+export const axaOverb = () => {
+    // Ensure a difference of no more than 10 between a and b
+    let a = Math.floor(Math.random() * 34) + 2;
+    let b = a + Math.floor(Math.random() * 10) + 1; // This ensures the difference <= 10
+    if (b > 35) {
+        b = a - (b - 35); // Adjust if b goes beyond 35
+    }
+
+    // Create the LaTeX question string
+    const question = `${a} \\times \\frac{${a}}{${b}}`;
+
+    // Calculate the answer as a fraction
+    let numerator = a * a;
+    let denominator = b;
+
+    // Assuming we have a function to simplify fractions
+    const simplified = simplifyFraction(numerator, denominator);
+
+    // Assuming we have a function to convert an improper fraction to a mixed number
+    const mixedNumberAnswer = improperToMixed(simplified.numerator, simplified.denominator).mixedString;
+
+    const answerImproper = `${simplified.numerator}/${simplified.denominator}`;
+
+    const solution = [mixedNumberAnswer, answerImproper];
+    console.log(question, solution)
+    return {
+        question: question,
+        solution: solution
+    };
+};
 
