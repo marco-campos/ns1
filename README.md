@@ -7,8 +7,6 @@ This project is largely inspired by [Bryant Heath's wonderful book](https://brya
 My goal is to have a webapp where to students can practice their number sense anywhere they go. For now, I am just generating the questions/answer keys based on functions designed to generate the types of popular questions that you may see in a number sense exam.
 
 ## Short Term Goals
-- Implement the option for answering with mixed numbers
-    - Currently working on this in a separate branch.
 - Implement the option for answering within 10 percent of an answer.
 - Piece out the components a bit more. It appears that we will need different SkillPracticeScreens for each section.
 - Piece out the generator functions into different folders.
@@ -39,6 +37,8 @@ I split the types of questions into different sections for clarity.
  - Several factoring problems
  - sum of consecutive squares
  - difference of squares
+ - mixed number foil
+ - a a/b trick
 
 ## Types of questions skipped (these are rare, will probably add later)
 - division by 25, 75, 50, etc.
