@@ -43,13 +43,24 @@ const GameScreen = ({ endGame, timeLimit, questionLimit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const matched = userInput.trim() === currentQuestion.solution
+    let matched = false;
+  
+    // Check if the solution is an array (i.e., there are multiple correct answers)
+    if (Array.isArray(currentQuestion.solution)) {
+      // If it is, check if the user input matches any of the correct answers
+      matched = currentQuestion.solution.includes(userInput.trim());
+    } else {
+      // If it's not an array, proceed as before
+      matched = userInput.trim() === currentQuestion.solution;
+    }
+  
     const updatedScore = matched ? score + 5 : score - 7;
     setAnswers([...answers, { ...currentQuestion, userInput: userInput.trim(), matched }]);
     setScore(updatedScore);
     setQuestionCount(prevCount => prevCount + 1);
     setUserInput(''); // Clear input field
   };
+  
 
   return (
     <div>

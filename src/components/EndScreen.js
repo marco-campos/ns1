@@ -18,7 +18,7 @@ const EndScreen = ({ score, answers, startGame, goToHome }) => {
           {answers.map((item, index) => (
             <tr key={index} style={{ backgroundColor: item.matched ? 'green' : 'red' }}>
               <td>{item.question && <TextDisplay text={item.question} />}</td>
-              <td>{item.solution}</td>
+              <td>{Array.isArray(item.solution) ? item.solution[0] : item.solution}</td>
               <td>{item.userInput}</td>
             </tr>
           ))}
