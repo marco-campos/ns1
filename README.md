@@ -14,7 +14,6 @@ My goal is to have a webapp where to students can practice their number sense an
 - Not-so-ugly front-end UI. Nothing special, just enough that it doesn't hurt the eyes
     - This includes compatability with mobile devices.
 - A fully functioning webapp to generate an exam with **most** of the popular exam questions.
-- An option to practice a very specific type of question so that if a student wants to improve on a weakness, then they can just endlessly practice it.
 
 ## Long Term Goals
 - Backend servers to track high scores
