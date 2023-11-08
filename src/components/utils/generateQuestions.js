@@ -1,6 +1,6 @@
-import { foil2x2, foil2x3, foil3x3, multiply11, multiply111, multiply101, multiply25, multiply75, multiplyNear100, squaresEnd5, squares4159 } from './section1a';
-import { factor1a, factor1b, commonfactorpm, sumconsecutivesquares, differenceSquares} from './section1b';  
-import { mixedFoil1, axaOverb } from './section1c';
+import { foil2x2, foil2x3, foil3x3, multiply11, multiply111, multiply101, multiply25, multiply75, multiplyNear100, squaresEnd5, squares4159 } from './section1/section1a';
+import { factor1a, factor1b, commonfactorpm, sumconsecutivesquares, differenceSquares} from './section1/section1b';  
+import { mixedFoil1, axaOverb } from './section1/section1c';
 
 export function generateQuestionsWithSolutions(numberOfQuestions) {
     let questionsWithSolutions = [];
