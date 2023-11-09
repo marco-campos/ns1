@@ -11,6 +11,8 @@ const SkillPracticeScreen = ({ endPractice, skillType }) => {
 
   // Using useCallback to memoize the function so it doesn't change unless skillType changes
   const generateQuestion = useCallback(() => {
+    console.log("Generation of Question")
+    console.log(skillType)
     switch (skillType) {
       case 'foil2x2':
         return foil2x2();

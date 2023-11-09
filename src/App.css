@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* App.css */
+.skill-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjust the space between each option as needed */
+}
+
+.skill-option {
+  margin-bottom: 5px; /* Adjust spacing as needed */
+}
+
+/* If you want the options to appear in a grid */
+.skill-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* This will create a responsive grid layout */
+  gap: 15px; /* Adjust the space between items as needed */
+}

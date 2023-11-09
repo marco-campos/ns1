@@ -135,7 +135,7 @@ export function multiply75() {
 
     // Generate the random number in the selected range
     const num = Math.floor(Math.random() * (max - min + 1)) + min;
-    const multiplier = 25;
+    const multiplier = 75;
   
     // Construct the question and calculate the answer
     const question = `${num} \\times ${multiplier}`;
