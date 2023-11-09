@@ -79,6 +79,10 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
         
         <button onClick={handleSkillStart}>Start Skill Practice</button>
         <h3>Coming Soon!</h3>
+        <h4>Mixed Number Arithmetic</h4>
+        <h4>Remainder Tricks</h4>
+        <h4>Misc Arithmetic</h4>
+        <h3>Section 2: Memorization</h3>
         {/* ... upcoming sections ... */}
       </div>
     </div>
