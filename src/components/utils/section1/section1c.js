@@ -120,7 +120,6 @@ export const axaOverb = () => {
     const answerImproper = `${simplified.numerator}/${simplified.denominator}`;
 
     const solution = [mixedNumberAnswer, answerImproper];
-    console.log(question, solution)
     return {
         question: question,
         solution: solution

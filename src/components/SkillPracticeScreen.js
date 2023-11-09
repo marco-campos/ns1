@@ -11,8 +11,6 @@ const SkillPracticeScreen = ({ endPractice, skillType, questionGenerator }) => {
 
   // Using useCallback to memoize the function so it doesn't change unless skillType changes
   const generateQuestion = useCallback(() => {
-    console.log(questionGenerator)
-    console.log(skillType)
     const generator = questionGenerator[skillType];
     if (!generator) {
       throw new Error(`Question generator for skill type "${skillType}" not found.`);

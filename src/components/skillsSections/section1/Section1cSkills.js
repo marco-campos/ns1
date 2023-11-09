@@ -23,7 +23,6 @@ const Section1cSkills = ({ selectedSkill, onSkillChange }) => {
                 checked={selectedSkill === skill.value}
                 onChange={onSkillChange}
               />
-              {console.log(skill.value)}
               {(skill.value !== 'mixedFoil1') ? 
               <TextDisplay text={skill.label}/> 
               : skill.label
