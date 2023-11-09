@@ -1,10 +1,10 @@
 // components/StartScreen.js
 import React, { useState } from 'react';
-import Section1aSkills from './skillsSections/section1/Section1aSkills';
-import Section1bSkills from './skillsSections/section1/Section1bSkills';
-import Section1cSkills from './skillsSections/section1/Section1cSkills'
+import Section1aSkills from '../skillsSections/section1/Section1aSkills';
+import Section1bSkills from '../skillsSections/section1/Section1bSkills';
+import Section1cSkills from '../skillsSections/section1/Section1cSkills'
 
-import {determineGeneratorObject} from './utils/generateQuestions'
+import {determineGeneratorObject} from '../utils/generateQuestions'
 
 const StartScreen = ({ startGame, startSkillPractice }) => {
   const [timeOption, setTimeOption] = useState(600); // Default 10 minutes
@@ -61,7 +61,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
       <div>
         <h2>Practice Skills</h2>
         <p>Pick a type of problem to practice on. There is no timer, just keep working problems and at the end you can see how you did.</p>
-        
+        <button onClick={handleSkillStart}>Start Skill Practice</button>
         {/* Section1aSkills handles its own skill selection */}
         <Section1aSkills
           selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
@@ -86,7 +86,6 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
         />
         {/* ... other sections ... */}
         
-        <button onClick={handleSkillStart}>Start Skill Practice</button>
         <h3>Coming Soon!</h3>
         <h4>Remainder Tricks</h4>
         <h4>Misc Arithmetic</h4>

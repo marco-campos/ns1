@@ -1,7 +1,7 @@
 // components/GameScreen.js
 import React, { useState, useEffect } from 'react';
-import TextDisplay from './TextDisplay';
-import generateQuestionsWithSolutions from './utils/generateQuestions'; // adjust the import path as necessary
+import TextDisplay from '../TextDisplay';
+import generateQuestionsWithSolutions from '../utils/generateQuestions'; // adjust the import path as necessary
 
 const GameScreen = ({ endGame, timeLimit, questionLimit }) => {
   const [currentQuestion, setCurrentQuestion] = useState({});

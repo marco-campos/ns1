@@ -55,3 +55,23 @@
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* This will create a responsive grid layout */
   gap: 15px; /* Adjust the space between items as needed */
 }
+
+/* index.css or App.css */
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav a.active {
+  color: #0290d8;
+}
