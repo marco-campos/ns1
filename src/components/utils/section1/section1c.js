@@ -66,7 +66,7 @@ export const mixedFoil1 = () => {
     const [whole1, whole2] = getDivisibleNumbers(initialNumber);
     const [fracPart1, fracPart2] = getProperFractions(initialNumber);
 
-    const question = `${createLatexString(whole1, fracPart1, initialNumber)} \\times ${createLatexString(whole2, fracPart2, initialNumber)}`;
+    const question = `${createLatexString(whole1, fracPart1, initialNumber)} \\times ${createLatexString(whole2, fracPart2, initialNumber)} \\text{(mixed number/improper fraction)}`;
     // Convert mixed numbers to improper fractions
     const improper1 = mixedToImproper(whole1, fracPart1, initialNumber);
     const improper2 = mixedToImproper(whole2, fracPart2, initialNumber);
@@ -105,7 +105,7 @@ export const axaOverb = () => {
     }
 
     // Create the LaTeX question string
-    const question = `${a} \\times \\frac{${a}}{${b}}`;
+    const question = `${a} \\times \\frac{${a}}{${b}} \\text{(mixed number/improper fraction)}`;
 
     // Calculate the answer as a fraction
     let numerator = a * a;

@@ -39,6 +39,9 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
       <h1>Number Sense Practice</h1>
       <div>
         <h2>Practice Exam</h2>
+        <p>Take an exam with random questions from the available skills bellow. Your score will be calculated at the end with +5 points for every correct answer and -7 points for every incorrect or skipped question.</p>
+        <p>Note: Some questions require you to answer with either a mixed number or improper fraction.</p>
+        <p>Mixed numbers should be typed as "a b/c" (Notice the space!) with "a" being the whole number and "b/c" being the fraction in reduced form. Improper fractions must be in reduced form.</p>
         <div>
           <label htmlFor="time-select">Choose a time limit:</label>
           <select id="time-select" value={timeOption} onChange={handleTimeChange}>
