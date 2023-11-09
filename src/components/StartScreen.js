@@ -1,11 +1,13 @@
 // components/StartScreen.js
 import React, { useState } from 'react';
 import Section1aSkills from './skillsSections/section1/Section1aSkills'; // Import the new component
+import { generator1a } from './utils/section1/section1a';
 
 const StartScreen = ({ startGame, startSkillPractice }) => {
   const [timeOption, setTimeOption] = useState(600); // Default 10 minutes
   const [questionOption, setQuestionOption] = useState(10); // Default 10 questions
   const [selectedSkill, setSelectedSkill] = useState(''); // For skill practice, singular
+  const [currentSection, setCurrentSection] = useState(null);
 
   const handleTimeChange = (event) => {
     setTimeOption(parseInt(event.target.value, 10));
@@ -15,22 +17,32 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
     setQuestionOption(parseInt(event.target.value, 10));
   };
 
-  const handleSkillChange = (event) => {
-    setSelectedSkill(event.target.value); // Now handling a single skill, not multiple
-  };
-
   const handleStart = () => {
     // Pass the selected options to start the game
     startGame(timeOption, questionOption);
   };
 
   const handleSkillStart = () => {
-    // If a skill is selected, pass it to start the skill practice
     if(selectedSkill) {
-      startSkillPractice(selectedSkill);
+      const generatorObject = determineGeneratorObject(currentSection);
+      startSkillPractice(selectedSkill, generatorObject);
     } else {
-      // Handle the case where no skill is selected
-      alert("Please select a skill to practice.");
+      alert("Please select at least one skill to practice.");
+    }
+  };
+
+
+  const determineGeneratorObject = (skillToPractice) => {
+    // Logic to determine which generator object to use
+    // This can be as simple as a switch case or a mapping based on skillToPractice
+    switch (skillToPractice) {
+      case 'section1a':
+        return generator1a;
+    //   case 'section2a':
+    //     return generator2a;
+      // ... other cases for other sections
+      default:
+        return {}; // Default or throw an error if not found
     }
   };
   
@@ -65,7 +77,10 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
         {/* Section1aSkills handles its own skill selection */}
         <Section1aSkills
           selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
-          onSkillChange={handleSkillChange}
+          onSkillChange={(e) => {
+            setSelectedSkill(e.target.value);
+            setCurrentSection('section1a');
+          }}
         />
 
         {/* ... other sections ... */}

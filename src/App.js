@@ -2,21 +2,23 @@ import React, { useState } from 'react';
 import StartScreen from './components/StartScreen';
 import GameScreen from './components/GameScreen';
 import EndScreen from './components/EndScreen';
-import SkillPracticeScreen from './components/SkillPracticeScreen'; // You need to create this component
-
+import SkillPracticeScreen from './components/SkillPracticeScreen';
 
 function App() {
-  const [gameState, setGameState] = useState('start'); // start, inGame, end
-  const [timeLimit, setTimeLimit] = useState(600); // Default to 10 minutes
-  const [questionLimit, setQuestionLimit] = useState(10); // Default to 10 questions
+  const [gameState, setGameState] = useState('start');
+  const [timeLimit, setTimeLimit] = useState(600);
+  const [questionLimit, setQuestionLimit] = useState(10);
   const [score, setScore] = useState(0);
   const [answers, setAnswers] = useState([]);
-  const [selectedSkills, setSelectedSkills] = useState([]);
+  const [skillType, setSkillType] = useState('');
+  const [questionGenerator, setQuestionGenerator] = useState({});
 
-
-  const startSkillPractice = (skills) => {
-    setSelectedSkills(skills);
+  const startSkillPractice = (skillType, generatorObject) => {
+    setSkillType(skillType);
     setGameState('inSkillPractice');
+    // Determine and set the appropriate question generator based on the skill type
+    const generator = generatorObject
+    setQuestionGenerator(generator);
     // Reset score and answers for skill practice
     setScore(0);
     setAnswers([]);
@@ -45,33 +47,11 @@ function App() {
     case 'start':
       return <StartScreen startGame={startGame} startSkillPractice={startSkillPractice} />;
     case 'inGame':
-      return (
-        <GameScreen 
-          endGame={endGame} 
-          timeLimit={timeLimit} 
-          questionLimit={questionLimit}
-        />
-      );
-      case 'inSkillPractice':
-        // Make sure only one skill type is passed to the SkillPracticeScreen
-        // This assumes selectedSkills contains at least one skill.
-        const skillToPractice = selectedSkills; // Take the first skill for practice
-
-        return (
-          <SkillPracticeScreen 
-            endPractice={endGame} // Assuming you have an endPractice function that should be here
-            skillType={skillToPractice}
-          />
-        );
+      return <GameScreen endGame={endGame} timeLimit={timeLimit} questionLimit={questionLimit} />;
+    case 'inSkillPractice':
+      return <SkillPracticeScreen endPractice={endGame} skillType={skillType} questionGenerator={questionGenerator} />;
     case 'end':
-      return (
-        <EndScreen 
-          score={score} 
-          answers={answers} 
-          startGame={() => startGame(timeLimit, questionLimit)} 
-          goToHome={goToHome} 
-        />
-      );
+      return <EndScreen score={score} answers={answers} startGame={() => startGame(timeLimit, questionLimit)} goToHome={goToHome} />;
     default:
       return <div>Unknown state</div>;
   }

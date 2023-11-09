@@ -204,3 +204,17 @@ export function squares4159() {
       solution: answer,
     };
   }
+
+  export const generator1a = {
+    'foil2x2': foil2x2,
+    'foil2x3': foil2x3,
+    'multiply11': multiply11,
+    'multiply111': multiply111,
+    'multiply101': multiply101,
+    'multiply25': multiply25,
+    'multiply75': multiply75,
+    'squaresEnd5': squaresEnd5,
+    'foil3x3': foil3x3,
+    'multiplyNear100': multiplyNear100,
+    'squares4159': squares4159,
+  };

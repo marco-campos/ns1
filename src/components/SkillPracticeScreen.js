@@ -1,9 +1,9 @@
 // components/SkillPracticeScreen.js
 import React, { useState, useEffect, useCallback } from 'react';
 import TextDisplay from './TextDisplay';
-import { foil2x2, foil2x3, foil3x3, multiply11, multiply111, multiply101, multiply25, multiply75, multiplyNear100, squaresEnd5, squares4159 } from './utils/section1/section1a';
+// import { foil2x2, foil2x3, foil3x3, multiply11, multiply111, multiply101, multiply25, multiply75, multiplyNear100, squaresEnd5, squares4159 } from './utils/section1/section1a';
 
-const SkillPracticeScreen = ({ endPractice, skillType }) => {
+const SkillPracticeScreen = ({ endPractice, skillType, questionGenerator }) => {
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [userInput, setUserInput] = useState('');
   const [score, setScore] = useState(0);
@@ -11,36 +11,14 @@ const SkillPracticeScreen = ({ endPractice, skillType }) => {
 
   // Using useCallback to memoize the function so it doesn't change unless skillType changes
   const generateQuestion = useCallback(() => {
-    console.log("Generation of Question")
+    console.log(questionGenerator)
     console.log(skillType)
-    switch (skillType) {
-      case 'foil2x2':
-        return foil2x2();
-      case 'foil2x3':
-        return foil2x3();
-      case 'foil3x3':
-        return foil3x3();
-      case 'multiply11':
-        return multiply11();
-      case 'multiply111':
-        return multiply111();
-      case 'multiply101':
-        return multiply101();
-      case 'multiply25':
-        return multiply25();
-      case 'multiply75': 
-        return multiply75();
-      case 'multiplyNear100':
-        return multiplyNear100();
-      case 'squaresEnd5':
-        return squaresEnd5();
-      case 'squares4159':
-        return squares4159();
-      // Add more cases for other skills
-      default:
-        throw new Error(`Unknown skill type: ${skillType}`);
+    const generator = questionGenerator[skillType];
+    if (!generator) {
+      throw new Error(`Question generator for skill type "${skillType}" not found.`);
     }
-  }, [skillType]);
+    return generator();
+  }, [skillType, questionGenerator]); 
 
   // Call generateQuestion on component mount and whenever skillType changes
   useEffect(() => {
