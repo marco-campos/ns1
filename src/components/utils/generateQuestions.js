@@ -3,6 +3,7 @@ import { factor1a, factor1b, commonfactorpm, sumconsecutivesquares, differenceSq
 import { mixedFoil1, axaOverb } from './section1/section1c';
 import { generator1a } from './section1/section1a'
 import { generator1b } from './section1/section1b'
+import { generator1c } from './section1/section1c'
 
 
 export function generateQuestionsWithSolutions(numberOfQuestions) {
@@ -30,7 +31,10 @@ export const determineGeneratorObject = (skillToPractice) => {
       return generator1a;
     case 'section1b':
       return generator1b;
+    case 'section1c':
+      return generator1c;
     // ... other cases for other sections
+    
     default:
       return {}; // Default or throw an error if not found
   }

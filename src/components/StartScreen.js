@@ -1,7 +1,9 @@
 // components/StartScreen.js
 import React, { useState } from 'react';
 import Section1aSkills from './skillsSections/section1/Section1aSkills';
-import Section1bSkills from './skillsSections/section1/Section1bSkills'; // Import the new component
+import Section1bSkills from './skillsSections/section1/Section1bSkills';
+import Section1cSkills from './skillsSections/section1/Section1cSkills'
+
 import {determineGeneratorObject} from './utils/generateQuestions'
 
 const StartScreen = ({ startGame, startSkillPractice }) => {
@@ -75,11 +77,17 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
                 setCurrentSection('section1b');
             }}
         />
+        <Section1cSkills
+            selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
+            onSkillChange={(e) => {
+                setSelectedSkill(e.target.value);
+                setCurrentSection('section1c');
+            }}
+        />
         {/* ... other sections ... */}
         
         <button onClick={handleSkillStart}>Start Skill Practice</button>
         <h3>Coming Soon!</h3>
-        <h4>Mixed Number Arithmetic</h4>
         <h4>Remainder Tricks</h4>
         <h4>Misc Arithmetic</h4>
         <h3>Section 2: Memorization</h3>

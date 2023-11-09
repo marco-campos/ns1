@@ -127,3 +127,7 @@ export const axaOverb = () => {
     };
 };
 
+export const generator1c = {
+    'mixedFoil1': mixedFoil1,
+    'axaOverb': axaOverb
+}

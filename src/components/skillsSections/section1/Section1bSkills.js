@@ -1,10 +1,11 @@
 // components/Section1aSkills.js
 
 import React from 'react';
+import TextDisplay from '../../TextDisplay';
 
 const s1bSkills = [
-    { value: 'factor1a', label: 'Factoring Practice (na)^2 + a' },
-    { value: 'factor1b', label: 'Factoring Practice a^2 + a' },
+    { value: 'factor1a', label: ['(na)^2 + a'] },
+    { value: 'factor1b', label: ['a^2 + a'] },
     { value: 'commonfactorpm', label: 'Common Factor RPM' },
     { value: 'sumconsecutivesquares', label: 'Sum of Consecutive Squares' },
     { value: 'differenceSquares', label: 'Difference of Squares' },
@@ -27,7 +28,7 @@ const Section1bSkills = ({ selectedSkill, onSkillChange }) => {
                 checked={selectedSkill === skill.value}
                 onChange={onSkillChange}
               />
-              {skill.label}
+              {(Array.isArray(skill.label)) ?  <TextDisplay text={skill.label[0]}/> : skill.label}
             </label>
           </div>
         ))}
