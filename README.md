@@ -7,17 +7,15 @@ This project is largely inspired by [Bryant Heath's wonderful book](https://brya
 My goal is to have a webapp where to students can practice their number sense anywhere they go. For now, I am just generating the questions/answer keys based on functions designed to generate the types of popular questions that you may see in a number sense exam.
 
 ## Short Term Goals
-- Adjust the App.js to use React's NavBar. This is to add the possibility of more pages.
-    - Add a true home page
-    - Add a Learn page.
-    - Turn everything we have into the practice page
-    - add an about page.
+- A fully functioning webapp to generate an exam with **most** of the popular exam questions.
+    - I have a product that **works** so now I want to completely flesh out the bare minimum utility that I wanted. After this I will focus on cosmetics and trickier features.
+- Not-so-ugly front-end UI. Nothing special, just enough that it doesn't hurt the eyes
+    - This includes compatability with mobile devices.
+    - If feasible, I would love some three.js stuff.
 - Look into whether or not it is worth implementing global state management through Redux.
     - This might be worth it since I want students to be able to log in later on. 
 - Implement the option for answering within 10 percent of an answer.
-- Not-so-ugly front-end UI. Nothing special, just enough that it doesn't hurt the eyes
-    - This includes compatability with mobile devices.
-- A fully functioning webapp to generate an exam with **most** of the popular exam questions.
+
 
 ## Long Term Goals
 - Backend servers to track high scores

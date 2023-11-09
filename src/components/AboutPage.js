@@ -6,7 +6,7 @@ const AboutPage = () => {
       <h1>About Us</h1>
       <h2>Marco Campos</h2>
       <div>
-        <p>I am PhD student at the University of Houston studying Computational Topology.</p>
+        <p>I am a PhD student at the University of Houston studying Computational Topology.</p>
         <p>I previously taught AP Calculus, Pre-Calculus and OnRamps Pre-Calculus at Sharpstown High School. My passion for mathematics extended beyond the classroom as I founded and led a math team with a focus on the number sense UIL competitions.
 
 The unexpected turn of events brought by the Covid lockdown presented unique challenges. It was during this time that the seeds for this web application were sown where I went down a rabbithole and developed an initial version of the app, albeit a bit rough around the edges, to ensure that my students could continue their training uninterrupted.
