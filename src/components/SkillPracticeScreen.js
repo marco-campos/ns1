@@ -58,7 +58,7 @@ const SkillPracticeScreen = ({ endPractice, skillType, questionGenerator }) => {
 
   return (
     <div>
-      <h1>Skill Practice: {skillType}</h1>
+      <h1>Skill Practice</h1>
       <div>
         <TextDisplay text={currentQuestion.question} />
         <form onSubmit={handleSubmit}>

@@ -3,7 +3,7 @@
 import React from 'react';
 
 // Define the skills available in section 1a
-const section1aSkills = [
+const s1aSkills = [
   { value: 'foil2x2', label: 'Foil 2x2' },
   { value: 'foil2x3', label: 'Foil 2x3' },
   { value: 'foil3x3', label: 'Foil 3x3' },
@@ -23,7 +23,7 @@ const Section1aSkills = ({ selectedSkill, onSkillChange }) => {
     <fieldset>
       <legend>Section 1a: Multiplication</legend>
       <div className="skill-options">
-        {section1aSkills.map((skill) => (
+        {s1aSkills.map((skill) => (
           <div key={skill.value} className="skill-option">
             <label>
               <input

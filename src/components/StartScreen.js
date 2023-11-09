@@ -1,7 +1,8 @@
 // components/StartScreen.js
 import React, { useState } from 'react';
-import Section1aSkills from './skillsSections/section1/Section1aSkills'; // Import the new component
-import { generator1a } from './utils/section1/section1a';
+import Section1aSkills from './skillsSections/section1/Section1aSkills';
+import Section1bSkills from './skillsSections/section1/Section1bSkills'; // Import the new component
+import {determineGeneratorObject} from './utils/generateQuestions'
 
 const StartScreen = ({ startGame, startSkillPractice }) => {
   const [timeOption, setTimeOption] = useState(600); // Default 10 minutes
@@ -28,21 +29,6 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
       startSkillPractice(selectedSkill, generatorObject);
     } else {
       alert("Please select at least one skill to practice.");
-    }
-  };
-
-
-  const determineGeneratorObject = (skillToPractice) => {
-    // Logic to determine which generator object to use
-    // This can be as simple as a switch case or a mapping based on skillToPractice
-    switch (skillToPractice) {
-      case 'section1a':
-        return generator1a;
-    //   case 'section2a':
-    //     return generator2a;
-      // ... other cases for other sections
-      default:
-        return {}; // Default or throw an error if not found
     }
   };
   
@@ -82,7 +68,13 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
             setCurrentSection('section1a');
           }}
         />
-
+        <Section1bSkills
+            selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
+            onSkillChange={(e) => {
+                setSelectedSkill(e.target.value);
+                setCurrentSection('section1b');
+            }}
+        />
         {/* ... other sections ... */}
         
         <button onClick={handleSkillStart}>Start Skill Practice</button>

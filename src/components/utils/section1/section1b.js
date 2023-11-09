@@ -3,7 +3,7 @@ export function factor1a() {
     const a = Math.floor(Math.random() * 20);
   
     // Generate a random integer 'b' between 1 and 3
-    const b = Math.floor(Math.random() * 3) + 1;
+    const b = Math.floor(Math.random() * 2) + 2;
   
     // Calculate num1 and num2
     const num1 = a * b;
@@ -113,6 +113,14 @@ export function factor1a() {
   
     return pair;
   }  
+
+  export const generator1b = {
+    'factor1a': factor1a,
+    'factor1b': factor1b,
+    'commonfactorpm': commonfactorpm,
+    'sumconsecutivesquares': sumconsecutivesquares,
+    'differenceSquares': differenceSquares
+  }
   
 
   
