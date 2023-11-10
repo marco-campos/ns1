@@ -1,10 +1,23 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { NavLink } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 const NavBar = () => {
+  const location = useLocation()
   const [darkTheme, setDarkTheme] = useState(false);
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+  const [fade, setFade] = useState(false)
+
+  useEffect(() => {
+    // When the location changes, start the fade effect.
+    setFade(true);
+    const timeoutId = setTimeout(() => setFade(false), 300); // This should last as long as the transition
+  
+    // Clear the timeout when the component unmounts or if the location changes again.
+    return () => clearTimeout(timeoutId);
+  }, [location]);
+  
   const toggleTheme = () => {
     setDarkTheme(!darkTheme);
     document.body.classList.toggle('bg-dark');
@@ -13,7 +26,7 @@ const NavBar = () => {
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
   return (
-    <nav className={`navbar navbar-expand-lg ${darkTheme ? 'navbar-dark bg-dark' : 'navbar-light bg-light'}`}>
+    <nav className={`navbar navbar-expand-lg ${darkTheme ? 'navbar-dark bg-dark' : 'navbar-light bg-light'} ${fade ? 'fade-enter' : ''}`}>
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/">
         <img

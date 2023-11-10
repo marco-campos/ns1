@@ -83,3 +83,15 @@ nav a.active {
   font-weight: normal; /* Adjust weight as needed */
   font-size: 1rem; /* Adjust size as needed */
 }
+/* In your CSS file */
+
+/* Add this CSS to your stylesheet */
+.fade-enter {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
