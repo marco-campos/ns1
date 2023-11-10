@@ -65,6 +65,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
       <div>
         <h2>Practice Skills</h2>
         <p>Pick a type of problem to practice on. There is no timer, just keep working problems and at the end you can see how you did.</p>
+        <h3>Section 1: Basic Arithmetic Tricks</h3>
         <button onClick={handleSkillStart}>Start Multiplication Practice</button>
         {/* Section1aSkills handles its own skill selection */}
         <Section1aSkills
@@ -99,11 +100,10 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
             }}
         />
         {/* ... other sections ... */}
-        
-        <h3>Coming Soon!</h3>
-        <h4>Remainder Tricks</h4>
-        <h4>Misc Arithmetic</h4>
         <h3>Section 2: Memorization</h3>
+        
+        <h3>Coming Soon</h3>
+        <h4>Memorization Applications</h4>
         {/* ... upcoming sections ... */}
       </div>
     </div>

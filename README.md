@@ -22,26 +22,6 @@ My goal is to have a webapp where to students can practice their number sense an
 - A statistical system to help students pinpoint their weaknesses.
     - This will probably require several key statistics to be kept about the student (question type with percentage answered correctly, maybe even time spent on a question) on the server which can become expensive. Would probably have to introduce a paid system if I ever did make this but one can dream.
 
-## Types of questions implemented:
-I split the types of questions into different sections for clarity.
-### Section 1
- - foil2x2
- - foil2x3
- - multiply11
- - multiply111
- - multiply101
- - multiply25
- - multiply75
- - Multiplying numbers near 100
- - squares ending in 5
- - squares from 41 to 59.
- - Several factoring problems
- - sum of consecutive squares
- - difference of squares
- - mixed number foil
- - a a/b trick
- - All remainder tricks
-
 ## Types of questions skipped (these are rare, will probably add later)
 - division by 25, 75, 50, etc.
 - fractions of 100, 1000, 10000
@@ -56,3 +36,14 @@ I split the types of questions into different sections for clarity.
 - Division by 9 mixed number trick (is evident by the remainder trick)
 - Converting a/40, a/80 into decimals.
 - Summation of a/b(b+1)+ a/(b+1)(b+2) + ....
+- Powers of 2,3,5
+- Special Fractions
+- Applications to some of the memorizations of roots.
+- Roman Numeral Arithmetic
+- Platonic solis
+- pi and e approximations
+- distance and velocity conversions
+- conversions of distance, area and volume
+- fluid and weight conversions
+- celsius to fahrenheit
+- sum of alternating squares
