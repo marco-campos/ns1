@@ -5,7 +5,7 @@ import HomePage from './components/HomePage';
 import LearningPage from './components/LearningPage';
 import PracticePage from './components/PracticePage'; // Renamed App.js to PracticePage.js
 import AboutPage from './components/AboutPage';
-
+import Footer from './Footer';
 
 function App() {
   return (
@@ -18,7 +18,9 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         {/* Use 'Route' with 'element' prop instead of 'component' */}
       </Routes>
+      <Footer />
     </Router>
+ 
   );
 }
 
