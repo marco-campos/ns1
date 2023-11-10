@@ -67,9 +67,9 @@ const GameScreen = ({ endGame, timeLimit, questionLimit, endPractice }) => {
       <h2 className="text-center mb-4">Time Remaining: {`${Math.floor(timer / 60)}:${('0' + (timer % 60)).slice(-2)}`}</h2>
       {currentQuestion.question && (
         <div className="mb-3 text-center">
-          {/* Render the LaTeX question here */}
-          <TextDisplay text={currentQuestion.question} />
-        </div>
+        <TextDisplay text={currentQuestion.question}/>
+      </div>
+      
       )}
       <form onSubmit={handleSubmit} className="text-center mb-3">
         <input

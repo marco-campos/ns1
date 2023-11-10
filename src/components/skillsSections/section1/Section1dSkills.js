@@ -12,27 +12,31 @@ const s1dSkills = [
 
 const Section1dSkills = ({ selectedSkill, onSkillChange }) => {
 console.log(selectedSkill)
-  return (
-    <fieldset>
-      <legend>Section 1d: Remainder Tricks</legend>
-      <div className="skill-options">
-        {s1dSkills.map((skill) => (
-          <div key={skill.value} className="skill-option">
-            <label>
-              <input
-                type="radio"
-                name="skill"
-                value={skill.value}
-                checked={selectedSkill === skill.value}
-                onChange={onSkillChange}
-              />
-              {skill.label }
+return (
+  <fieldset className="p-3">
+    <legend className="w-auto px-2">Section 1a: Multiplication</legend>
+    <div className="d-flex flex-wrap justify-content-center">
+      {s1dSkills.map((skill) => (
+        <div key={skill.value} className="skill-option m-2">
+          <div className="form-check">
+            <input
+              className="form-check-input"
+              type="radio"
+              name="skill"
+              id={`skill-${skill.value}`}
+              value={skill.value}
+              checked={selectedSkill === skill.value}
+              onChange={onSkillChange}
+            />
+            <label className="form-check-label" htmlFor={`skill-${skill.value}`}>
+              {skill.label}
             </label>
           </div>
-        ))}
-      </div>
-    </fieldset>
-  );
+        </div>
+      ))}
+    </div>
+  </fieldset>
+);
 };
 
 export default Section1dSkills;

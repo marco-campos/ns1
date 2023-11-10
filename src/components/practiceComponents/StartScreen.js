@@ -14,8 +14,8 @@ import {determineGeneratorObject} from '../utils/generateQuestions'
 const StartScreen = ({ startGame, startSkillPractice }) => {
   const [timeOption, setTimeOption] = useState(600); // Default 10 minutes
   const [questionOption, setQuestionOption] = useState(10); // Default 10 questions
-  const [selectedSkill, setSelectedSkill] = useState(''); // For skill practice, singular
-  const [currentSection, setCurrentSection] = useState(null);
+  const [selectedSkill, setSelectedSkill] = useState('foil2x2'); // For skill practice, singular
+  const [currentSection, setCurrentSection] = useState('section1a');
 
   const handleTimeChange = (event) => {
     setTimeOption(parseInt(event.target.value, 10));
@@ -74,7 +74,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
         <div className="card-body">
           <h2 className="card-title">Practice Skills</h2>
             <p>Pick a type of problem to practice on. There is no timer, just keep working problems and at the end you can see how you did.</p>
-      
+            <p>The default option is to practice multiplication of two 2-digit numbers using the FOIL technique.</p>
         <button className="btn btn-primary" onClick={handleSkillStart}>Start Practicing!</button>
 
         <div className="mb-3">
@@ -218,7 +218,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
       </div>
     </div>
     <div className="my-4">
-        <h3>Coming Soon</h3>
+        <h3>Coming Soon!</h3>
         <h4>Memorization Applications</h4>
         <h4>Fibonacci Numbers</h4>
         <h4>Integral Divisors</h4>

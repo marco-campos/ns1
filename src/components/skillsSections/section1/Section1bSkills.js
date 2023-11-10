@@ -15,26 +15,35 @@ const s1bSkills = [
 
 const Section1bSkills = ({ selectedSkill, onSkillChange }) => {
   return (
-    <fieldset>
-      <legend>Section 1b: Factoring</legend>
-      <div className="skill-options">
+    <fieldset className="p-3">
+      <legend className="w-auto px-2">Section 1b: Factoring</legend>
+      <div className="d-flex flex-wrap justify-content-center">
         {s1bSkills.map((skill) => (
-          <div key={skill.value} className="skill-option">
-            <label>
+          <div key={skill.value} className="skill-option m-2">
+            <div className="form-check">
               <input
+                className="form-check-input"
                 type="radio"
                 name="skill"
+                id={`skill-${skill.value}`}
                 value={skill.value}
                 checked={selectedSkill === skill.value}
                 onChange={onSkillChange}
               />
-              {(Array.isArray(skill.label)) ?  <TextDisplay text={skill.label[0]}/> : skill.label}
-            </label>
+              <label className="form-check-label" htmlFor={`skill-${skill.value}`}>
+                {Array.isArray(skill.label) ? (
+                  <TextDisplay text={skill.label[0]} />
+                ) : (
+                  skill.label
+                )}
+              </label>
+            </div>
           </div>
         ))}
       </div>
     </fieldset>
   );
+  
 };
 
 export default Section1bSkills;

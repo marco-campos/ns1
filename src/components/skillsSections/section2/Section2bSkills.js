@@ -11,21 +11,25 @@ const s2bSkills = [
 
 const Section2bSkills = ({ selectedSkill, onSkillChange }) => {
   return (
-    <fieldset>
-      <legend>Section 2b: Memorization Applications</legend>
-      <div className="skill-options">
+    <fieldset className="p-3">
+      <legend className="w-auto px-2">Section 1a: Multiplication</legend>
+      <div className="d-flex flex-wrap justify-content-center">
         {s2bSkills.map((skill) => (
-          <div key={skill.value} className="skill-option">
-            <label>
+          <div key={skill.value} className="skill-option m-2">
+            <div className="form-check">
               <input
+                className="form-check-input"
                 type="radio"
                 name="skill"
+                id={`skill-${skill.value}`}
                 value={skill.value}
                 checked={selectedSkill === skill.value}
                 onChange={onSkillChange}
               />
-              {skill.label}
-            </label>
+              <label className="form-check-label" htmlFor={`skill-${skill.value}`}>
+                {skill.label}
+              </label>
+            </div>
           </div>
         ))}
       </div>
