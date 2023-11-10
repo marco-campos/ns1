@@ -45,6 +45,11 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
       <div className="card mb-3">
         <div className="card-body">
           <h2 className="card-title">Practice Exam</h2>
+          <p className="card-text">Pick the desired length of time as well as how many questions you want to practice on. We will generate random questions from the list in the Practice section. Your score will be calulated as follows:</p>
+          <ul>
+            <li>+5 points for every question that is correct</li>
+            <li>-7 points for every question that is incorrect</li>
+          </ul>
           <p className="card-text">Mixed numbers should be typed as "a b/c" (Notice the space!) with "a" being the whole number and "b/c" being the fraction in reduced form. Improper fractions must be in reduced form.</p>
           <form className="mb-3">
         <div className="mb-3">
@@ -75,7 +80,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
           <h2 className="card-title">Practice Skills</h2>
             <p>Pick a type of problem to practice on. There is no timer, just keep working problems and at the end you can see how you did.</p>
             <p>The default option is to practice multiplication of two 2-digit numbers using the FOIL technique.</p>
-        <button className="btn btn-primary" onClick={handleSkillStart}>Start Practicing!</button>
+            <button className="btn btn-primary mb-4" onClick={handleSkillStart}>Start Practicing!</button>
 
         <div className="mb-3">
         <h3>Section 1: Basic Arithmetic Tricks</h3>
