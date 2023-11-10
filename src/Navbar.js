@@ -3,12 +3,17 @@ import { NavLink } from 'react-router-dom';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 const NavBar = () => {
+  const [darkTheme, setDarkTheme] = useState(false);
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
-
+  const toggleTheme = () => {
+    setDarkTheme(!darkTheme);
+    document.body.classList.toggle('bg-dark');
+    document.body.classList.toggle('text-white');
+  };
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className={`navbar navbar-expand-lg ${darkTheme ? 'navbar-dark bg-dark' : 'navbar-light bg-light'}`}>
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/">
         <img
@@ -32,6 +37,7 @@ const NavBar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+        
         <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
@@ -53,6 +59,11 @@ const NavBar = () => {
               <NavLink to="/about" className="nav-link" activeClassName="active" onClick={() => setIsNavCollapsed(true)}>
                 About
               </NavLink>
+            </li>
+            <li className="nav-item">
+            <button onClick={toggleTheme} className="btn">
+              <i className={`fas ${darkTheme ? 'fa-sun' : 'fa-moon'}`}></i>
+            </button>
             </li>
           </ul>
         </div>

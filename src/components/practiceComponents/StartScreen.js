@@ -64,7 +64,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
             <option value={20}>20 questions</option>
           </select>
         </div>
-        <button type="button" className="btn btn-primary" onClick={handleStart}>Start Game</button>
+        <button type="button" className="btn btn-primary" onClick={handleStart}>Start Exam</button>
       </form>
         </div>
       </div>
