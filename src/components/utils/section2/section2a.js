@@ -41,3 +41,11 @@ export function cubeRoot() {
         solution: answer,
     };
     }
+
+export const generator2a = {
+    'squares': squares,
+    'squareRoot': squareRoot,
+    'cubes': cubes,
+    'cubeRoot': cubeRoot,
+    }
+      

@@ -5,6 +5,11 @@ import Section1bSkills from '../skillsSections/section1/Section1bSkills';
 import Section1cSkills from '../skillsSections/section1/Section1cSkills'
 import Section1dSkills from '../skillsSections/section1/Section1dSkills'
 
+import Section2aSkills from '../skillsSections/section2/Section2aSkills'
+import Section2bSkills from '../skillsSections/section2/Section2bSkills'
+import Section2cSkills from '../skillsSections/section2/Section2cSkills'
+
+
 import {determineGeneratorObject} from '../utils/generateQuestions'
 
 const StartScreen = ({ startGame, startSkillPractice }) => {
@@ -101,7 +106,33 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
         />
         {/* ... other sections ... */}
         <h3>Section 2: Memorization</h3>
-        
+
+        <button onClick={handleSkillStart}>Start Remainders Practice</button>
+        <Section2aSkills
+            selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
+            onSkillChange={(e) => {
+                setSelectedSkill(e.target.value);
+                setCurrentSection('section2a');
+            }}
+        />
+
+        <button onClick={handleSkillStart}>Start Remainders Practice</button>
+        <Section2bSkills
+            selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
+            onSkillChange={(e) => {
+                setSelectedSkill(e.target.value);
+                setCurrentSection('section2b');
+            }}
+        />
+
+        <button onClick={handleSkillStart}>Start Remainders Practice</button>
+        <Section2cSkills
+            selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
+            onSkillChange={(e) => {
+                setSelectedSkill(e.target.value);
+                setCurrentSection('section2c');
+            }}
+        />
         <h3>Coming Soon</h3>
         <h4>Memorization Applications</h4>
         {/* ... upcoming sections ... */}

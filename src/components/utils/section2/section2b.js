@@ -1,8 +1,9 @@
 export function squaresdecimal() {
     const number = Math.floor(Math.random() * (49)) + 2;
-    const number_decimal = number / 10
-    const question = `${number_decimal}^2 = (decimal)`;
-    const answer = String(number_decimal*number_decimal);
+    const num2 = number * number
+    const number_decimal = num2 / 100
+    const question = `${number/10}^2 = \\text{ (decimal)}`;
+    const answer = String(number_decimal);
     
     return {
       question: question,
@@ -10,10 +11,10 @@ export function squaresdecimal() {
     };
   }
 
-  
+
 export function squaresPercentage() {
 const number = Math.floor(Math.random() * (49)) + 2;
-const question = `${number} % of ${number} is: (decimal)`;
+const question = ` ${number} \\% \\text{  of } ${number} \\text{ is: (decimal)}`;
 const answer = String(number * number / 100);
 
 return {
@@ -53,7 +54,14 @@ export function romanNumeral() {
     const number = Math.floor(Math.random() * (2100 - 45 + 1)) + 45;
     const romanNumeral = convertToRoman(number);
     return {
-      question: `${romanNumeral} = (Arabic Numeral)`,
+      question: `${romanNumeral} = \\text{(Arabic Numeral)}`,
       solution: number,
     };
   }
+
+  export const generator2b = {
+    'squaresdecimal': squaresdecimal,
+    'squaresPercentage': squaresPercentage,
+    'romanNumeral': romanNumeral,
+    }
+      
