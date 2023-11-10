@@ -21,6 +21,8 @@ const AboutPage = () => {
           <p>The unexpected turn of events brought by the Covid lockdown presented unique challenges. It was during this time that I went down a rabbithole and developed an initial version of the app, albeit a bit rough around the edges, to ensure that my students could continue their training uninterrupted.</p>
           <p>My hope is to create a platform that could be accessed by any student with the drive to excel in math competitions regardless of their access to elite coaching. I wanted the questions to be uniquely generated, high scores to be tracked, and weaknesses to be recognized.</p>
           <p>Today, this web application is the first step towards the realization of that vision, and if sufficient interest rises, I'd love to continue expanding the amount of features.</p>
+          <p>If you'd like to contact me about any requests, bugs or anything math related, feel free to send me a message on my socials bellow. I am always looking to engage with the math community!</p>
+        
         </div>
       </div>
       </div>
