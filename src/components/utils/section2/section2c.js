@@ -37,7 +37,7 @@ return {
 export function firstmSquares() {
     const m = Math.floor(Math.random() * (4)) +7;
     const sum = m * (m+1) * (2*m+1)/6
-    const question = `1 + 4 + 9 ... + ${m*m} = `;
+    const question = `1 + 4 + 9 + ... + ${m*m} = `;
     const answer = String(sum);
     
     return {
@@ -49,7 +49,7 @@ export function firstmSquares() {
 export function firstmCubes() {
     const m = Math.floor(Math.random() * (4)) +7;
     const sumRoot = m * (m+1)/2
-    const question = `1 + 8 + 27 ... + ${m*m*m} = `;
+    const question = `1 + 8 + 27 + ... + ${m*m*m} = `;
     const answer = String(sumRoot * sumRoot);
     
     return {
@@ -67,7 +67,7 @@ export function arithmeticSeries() {
     const a2 = a1 + d
     const a3 = a2 + d
 
-    const question = `${a1} + ${a2} + ${a3} ... + ${am} = `;
+    const question = `${a1} + ${a2} + ${a3} + ... + ${am} = `;
     const answer = String(sum);
     
     return {
