@@ -55,21 +55,27 @@ const SkillPracticeScreen = ({ endPractice, skillType, questionGenerator }) => {
   }
 
   return (
-    <div>
-      <h1>Skill Practice</h1>
-      <div>
+    <div className="container my-4">
+      <h1 className="text-center mb-4">Skill Practice</h1>
+      <div className="mb-3 text-center">
         <TextDisplay text={currentQuestion.question} />
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="text-center mb-3">
           <input
             type="text"
             value={userInput}
             onChange={handleInputChange}
+            className="form-control text-center mb-2"
+            style={{ maxWidth: '300px', margin: 'auto' }}
             autoFocus
           />
-          <button type="submit">Submit</button>
+          <button type="submit" className="btn btn-primary">Submit</button>
         </form>
-        <button onClick={() => endPractice(score, answers)}>End Practice</button>
-      </div>
+        <div className="text-center">
+          <button onClick={() => endPractice(score, answers)} className="btn btn-secondary">
+            End Practice
+          </button>
+        </div>      
+        </div>
     </div>
   );
 };

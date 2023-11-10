@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import TextDisplay from '../TextDisplay';
 import generateQuestionsWithSolutions from '../utils/generateQuestions'; // adjust the import path as necessary
 
-const GameScreen = ({ endGame, timeLimit, questionLimit }) => {
+const GameScreen = ({ endGame, timeLimit, questionLimit, endPractice }) => {
   const [currentQuestion, setCurrentQuestion] = useState({});
   const [userInput, setUserInput] = useState('');
   const [timer, setTimer] = useState(timeLimit); // Assuming timeLimit is in minutes
@@ -63,18 +63,32 @@ const GameScreen = ({ endGame, timeLimit, questionLimit }) => {
   
 
   return (
-    <div>
-      <h2>Time Remaining: {`${Math.floor(timer / 60)}:${('0' + (timer % 60)).slice(-2)}`}</h2>
+    <div className="container my-4">
+      <h2 className="text-center mb-4">Time Remaining: {`${Math.floor(timer / 60)}:${('0' + (timer % 60)).slice(-2)}`}</h2>
       {currentQuestion.question && (
-        <div>
+        <div className="mb-3 text-center">
           {/* Render the LaTeX question here */}
           <TextDisplay text={currentQuestion.question} />
         </div>
       )}
-      <form onSubmit={handleSubmit}>
-        <input type="text" value={userInput} onChange={handleInputChange} autoFocus />
-        <button type="submit">Enter</button>
+      <form onSubmit={handleSubmit} className="text-center mb-3">
+        <input
+          type="text"
+          value={userInput}
+          onChange={handleInputChange}
+          className="form-control text-center mb-2"
+          style={{ maxWidth: '300px', margin: 'auto' }}
+          autoFocus
+        />
+        <button type="submit" className="btn btn-primary">
+          Submit Answer
+        </button>
       </form>
+      <div className="text-center">
+        <button onClick={() => endPractice(score, answers)} className="btn btn-secondary">
+          End Practice
+        </button>
+      </div>
     </div>
   );
 };

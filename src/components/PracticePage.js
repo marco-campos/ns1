@@ -47,7 +47,7 @@ function PracticePage() {
     case 'start':
       return <StartScreen startGame={startGame} startSkillPractice={startSkillPractice} />;
     case 'inGame':
-      return <GameScreen endGame={endGame} timeLimit={timeLimit} questionLimit={questionLimit} />;
+      return <GameScreen endPractice={endGame} endGame={endGame} timeLimit={timeLimit} questionLimit={questionLimit} />;
     case 'inSkillPractice':
       return <SkillPracticeScreen endPractice={endGame} skillType={skillType} questionGenerator={questionGenerator} />;
     case 'end':

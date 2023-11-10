@@ -1,6 +1,4 @@
-// components/StartScreen.js
 import React, { useState } from 'react';
-
 import Section1aSkills from '../skillsSections/section1/Section1aSkills';
 import Section1bSkills from '../skillsSections/section1/Section1bSkills';
 import Section1cSkills from '../skillsSections/section1/Section1cSkills'
@@ -47,25 +45,27 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
       <div className="card mb-3">
         <div className="card-body">
           <h2 className="card-title">Practice Exam</h2>
-          <p>Mixed numbers should be typed as "a b/c" (Notice the space!) with "a" being the whole number and "b/c" being the fraction in reduced form. Improper fractions must be in reduced form.</p>
-          <div className="mb-3">
-            <label htmlFor="time-select" className="form-label">Choose a time limit:</label>
-            <select id="time-select" className="form-select" value={timeOption} onChange={handleTimeChange}>
+          <p className="card-text">Mixed numbers should be typed as "a b/c" (Notice the space!) with "a" being the whole number and "b/c" being the fraction in reduced form. Improper fractions must be in reduced form.</p>
+          <form className="mb-3">
+        <div className="mb-3">
+          <label htmlFor="time-select" className="form-label">Choose a time limit:</label>
+          <select id="time-select" className="form-select" value={timeOption} onChange={handleTimeChange}>
             <option value={60}>1 minute</option>
             <option value={300}>5 minutes</option>
             <option value={600}>10 minutes</option>
-            </select>
-          </div>
-          <div className="mb-3">
-            <label htmlFor="question-select" className="form-label">Choose the number of questions:</label>
-            <select id="question-select" className="form-select" value={questionOption} onChange={handleQuestionChange}>
+          </select>
+        </div>
+        <div className="mb-3">
+          <label htmlFor="question-select" className="form-label">Choose the number of questions:</label>
+          <select id="question-select" className="form-select" value={questionOption} onChange={handleQuestionChange}>
             <option value={5}>5 questions</option>
             <option value={10}>10 questions</option>
             <option value={15}>15 questions</option>
             <option value={20}>20 questions</option>
-            </select>
-          </div>
-          <button className="btn btn-primary" onClick={handleStart}>Start Game</button>
+          </select>
+        </div>
+        <button type="button" className="btn btn-primary" onClick={handleStart}>Start Game</button>
+      </form>
         </div>
       </div>
 

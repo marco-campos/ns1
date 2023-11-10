@@ -4,7 +4,9 @@ import { mixedFoil1, axaOverb, a_bPlusb_a, a_bMinusNfrac1, a_bMinusNfrac2} from 
 import { remainderBy11, remainderBy3or9, remainderBy6or12or18, remainderBy2or4or8, complexRemainderQuestion } from './section1/section1d';
 import { squares, squareRoot, cubes, cubeRoot} from './section2/section2a'
 import {squaresdecimal, squaresPercentage, romanNumeral} from './section2/section2b'
-import {firstmInts,firstmOdds, firstmEvens,firstmSquares,firstmCubes,arithmeticSeries,infGeoSeries} from './section2/section2c'
+import {firstmInts,firstmOdds, firstmEvens,firstmSquares,firstmCubes,arithmeticSeries} from './section2/section2c'
+  //infGeoSeries} from './section2/section2c'
+
 // Move these up later.
 import { generator1a } from './section1/section1a'
 import { generator1b } from './section1/section1b'
@@ -24,7 +26,8 @@ export function generateQuestionsWithSolutions(numberOfQuestions) {
   
   const generators2a = [squares, squareRoot, cubes, cubeRoot]
   const generators2b = [squaresdecimal, squaresPercentage, romanNumeral]
-  const generators2c = [firstmInts,firstmOdds, firstmEvens,firstmSquares,firstmCubes,arithmeticSeries,infGeoSeries]
+  const generators2c = [firstmInts,firstmOdds, firstmEvens,firstmSquares,firstmCubes,arithmeticSeries]
+    //infGeoSeries]
   
   //const generators = [axaOverb]
 
