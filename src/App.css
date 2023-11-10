@@ -75,3 +75,11 @@ nav a {
 nav a.active {
   color: #0290d8;
 }
+
+/* Add this to your CSS file */
+
+.navbar-brand {
+  font-family: 'Your Font Family', sans-serif; /* Replace 'Your Font Family' with the actual font family you're using */
+  font-weight: normal; /* Adjust weight as needed */
+  font-size: 1rem; /* Adjust size as needed */
+}

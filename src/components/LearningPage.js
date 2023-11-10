@@ -1,31 +1,41 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link for internal navigation
+import { Link } from 'react-router-dom';
 
 const LearningPage = () => {
   return (
-    <div>
-      <h1>Learning Resources</h1>
+    <div className="container my-5">
+      <h1 className="mb-4 text-center">Learning Resources</h1>
       
       {/* Section with external link */}
-      <div>
-        <h2>External Resources</h2>
-        <h3>Books</h3>
-        <p>Bryant Heath wrote a wonderful book several years ago about number sense tricks:</p>
-        <a href="https://bryantheath.com/files/2018/04/Heath_NSTricks_revA.pdf" target="_blank" rel="noopener noreferrer">
-          BryantHeath.com
-        </a>
-        <h3>Texas Math Mundo</h3>
-        <p>This channel was created by a former colleague and rival of mine to bring the competitive math scene in Texas together. Check him out!</p>
-        <a href="https://www.youtube.com/channel/UCDHQCWfSMjNJJS0aJx8jITw" target="_blank" rel="noopener noreferrer">
-          Texas Math Mundo Youtube Channel
-        </a>
+      <div className="card mb-3">
+        <div className="card-body">
+          <h2 className="card-title">External Resources</h2>
+          <h3>Books</h3>
+          <p>Bryant Heath wrote a wonderful book several years ago about number sense tricks:</p>
+          <a href="https://bryantheath.com/files/2018/04/Heath_NSTricks_revA.pdf" 
+             className="btn btn-link" 
+             target="_blank" 
+             rel="noopener noreferrer">
+            BryantHeath.com
+          </a>
+          <h3>Texas Math Mundo</h3>
+          <p>This channel was created by a former colleague and rival of mine to bring the competitive math scene in Texas together. Check him out!</p>
+          <a href="https://www.youtube.com/channel/UCDHQCWfSMjNJJS0aJx8jITw" 
+             className="btn btn-link" 
+             target="_blank" 
+             rel="noopener noreferrer">
+            Texas Math Mundo YouTube Channel
+          </a>
+        </div>
       </div>
       
       {/* Section with link to Practice page */}
-      <div>
-        <h2>Practice Skills</h2>
-        <p>Ready to test your skills? Head over to the practice section:</p>
-        <Link to="/practice">Go to Practice</Link>
+      <div className="card">
+        <div className="card-body text-center">
+          <h2 className="card-title">Practice Skills</h2>
+          <p>Ready to test your skills? Head over to the practice section:</p>
+          <Link to="/practice" className="btn btn-primary">Go to Practice</Link>
+        </div>
       </div>
     </div>
   );
