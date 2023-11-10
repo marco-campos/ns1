@@ -11,7 +11,7 @@ const LearningPage = () => {
         <div className="card-body">
           <h2 className="card-title">External Resources</h2>
           <h3>Books</h3>
-          <p>Bryant Heath wrote a wonderful book several years ago about number sense tricks:</p>
+          <p>Bryant Heath wrote a wonderful book several years ago about number sense tricks which is available for free on his website:</p>
           <a href="https://bryantheath.com/files/2018/04/Heath_NSTricks_revA.pdf" 
              className="btn btn-link" 
              target="_blank" 
@@ -19,7 +19,8 @@ const LearningPage = () => {
             BryantHeath.com
           </a>
           <h3>Texas Math Mundo</h3>
-          <p>This channel was created by a former colleague and rival of mine to bring the competitive math scene in Texas together. Check him out!</p>
+          <p>This channel was created by a former colleague and rival of mine to bring the competitive math scene in Texas together.</p>
+          <p> He posts a lot of interviews with people from the competitive math scene as well as tips and tricks to improve. Check him out!</p>
           <a href="https://www.youtube.com/channel/UCDHQCWfSMjNJJS0aJx8jITw" 
              className="btn btn-link" 
              target="_blank" 
