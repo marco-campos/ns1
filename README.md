@@ -7,10 +7,11 @@ This project is largely inspired by [Bryant Heath's wonderful book](https://brya
 My goal is to have a webapp where to students can practice their number sense anywhere they go. For now, I am just generating the questions/answer keys based on functions designed to generate the types of popular questions that you may see in a number sense exam.
 
 ## Short Term Goals
-- Look into whether or not it is worth implementing global state management through Redux.
-    - This might be worth it since I want students to be able to log in later on. 
 - A fully functioning webapp to generate an exam with **most** of the popular exam questions.
     - I have a product that **works** so now I want to completely flesh out the bare minimum utility that I wanted. After this I will focus on cosmetics and trickier features.
+    - As long as I go through the book, implement all of the standard tricks and keep up with the ones I skipped by writing them bellow then that should be good enough.
+- Look into whether or not it is worth implementing global state management through Redux.
+    - This might be worth it since I want students to be able to log in later on. 
 - Implement the option for answering within 10 percent of an answer.
 
 
