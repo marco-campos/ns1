@@ -54,7 +54,7 @@ const GameScreen = ({ endGame, timeLimit, questionLimit, endPractice }) => {
       matched = userInput.trim() === currentQuestion.solution;
     }
   
-    const updatedScore = matched ? score + 5 : score - 7;
+    const updatedScore = matched ? score + 5 : score - 9;
     setAnswers([...answers, { ...currentQuestion, userInput: userInput.trim(), matched }]);
     setScore(updatedScore);
     setQuestionCount(prevCount => prevCount + 1);
