@@ -126,7 +126,104 @@ export const axaOverb = () => {
     };
 };
 
+export const a_bPlusb_a = () => {
+    // Ensure a difference of no more than 10 between a and b
+    let a = Math.floor(Math.random() * 15) + 2;
+    let b = Math.floor(Math.random() * 15) + 2;; // This ensures the difference <= 10
+    // Create the LaTeX question string
+    const question = `\\frac{${a}}{${b}} + \\frac{${b}}{${a}}`;
+
+    // Calculate the answer as a fraction
+    let numerator = a * a + b * b;
+    let denominator = a*b;
+
+    // Assuming we have a function to simplify fractions
+    const simplified = simplifyFraction(numerator, denominator);
+
+    // Assuming we have a function to convert an improper fraction to a mixed number
+    const mixedNumberAnswer = improperToMixed(simplified.numerator, simplified.denominator).mixedString;
+
+    const answerImproper = `${simplified.numerator}/${simplified.denominator}`;
+
+    const solution = [mixedNumberAnswer, answerImproper];
+
+
+    return {
+        question: question,
+        solution: solution
+    };
+};
+
+export const a_bMinusNfrac1 = () => {
+    // Ensure a difference of no more than 10 between a and b
+    let a = Math.floor(Math.random() * 15) + 2; // a is in the range of 2 to 16
+    let b = Math.floor(Math.random() * (15 - a)) + a + 1; // b is in the range of a+1 to 1
+    let n = Math.floor(Math.random() * 5) + 2;
+
+    let c = n*a-1
+    let d = n*b+1
+    // Create the LaTeX question string
+    const question = `\\frac{${a}}{${b}} - \\frac{${c}}{${d}}`;
+
+    // Calculate the answer as a fraction
+    let numerator = a+b;
+    let denominator = b * (n * b + 1);
+
+    // Assuming we have a function to simplify fractions
+    const simplified = simplifyFraction(numerator, denominator);
+
+    // Assuming we have a function to convert an improper fraction to a mixed number
+    const mixedNumberAnswer = improperToMixed(simplified.numerator, simplified.denominator).mixedString;
+
+    const answerImproper = `${simplified.numerator}/${simplified.denominator}`;
+
+    const solution = [mixedNumberAnswer, answerImproper];
+
+
+    return {
+        question: question,
+        solution: solution
+    };
+};
+
+export const a_bMinusNfrac2 = () => {
+    // Ensure a difference of no more than 10 between a and b
+    let a = Math.floor(Math.random() * 15) + 2; // a is in the range of 2 to 16
+    let b = Math.floor(Math.random() * (15 - a)) + a + 1; // b is in the range of a+1 to 16
+    let n = Math.floor(Math.random() * 5) + 2;
+
+    let c = n*a+1
+    let d = n*b-1
+    // Create the LaTeX question string
+    const question = `\\frac{${a}}{${b}} - \\frac{${c}}{${d}}`;
+
+    // Calculate the answer as a fraction
+    let numerator = -a-b;
+    let denominator = b * (n * b - 1);
+
+    // Assuming we have a function to simplify fractions
+    const simplified = simplifyFraction(numerator, denominator);
+
+    // Assuming we have a function to convert an improper fraction to a mixed number
+    const mixedNumberAnswer = improperToMixed(simplified.numerator, simplified.denominator).mixedString;
+
+    const answerImproper = `${simplified.numerator}/${simplified.denominator}`;
+
+    const solution = [mixedNumberAnswer, answerImproper];
+
+
+    return {
+        question: question,
+        solution: solution
+    };
+};
+
+
 export const generator1c = {
     'mixedFoil1': mixedFoil1,
-    'axaOverb': axaOverb
+    'axaOverb': axaOverb,
+    'a_bPlusb_a': a_bPlusb_a,
+    'a_bMinusNfrac1':a_bMinusNfrac1,
+    'a_bMinusNfrac2':a_bMinusNfrac2
 }
+

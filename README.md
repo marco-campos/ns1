@@ -40,6 +40,7 @@ I split the types of questions into different sections for clarity.
  - difference of squares
  - mixed number foil
  - a a/b trick
+ - All remainder tricks
 
 ## Types of questions skipped (these are rare, will probably add later)
 - division by 25, 75, 50, etc.
@@ -52,3 +53,6 @@ I split the types of questions into different sections for clarity.
 - Special case factoring trick
     - Honestly, this one pops up sufficiently often but it is non-trivial to code so it'll be for later...
 - Multiplying two numbers ending in 5.
+- Division by 9 mixed number trick (is evident by the remainder trick)
+- Converting a/40, a/80 into decimals.
+- Summation of a/b(b+1)+ a/(b+1)(b+2) + ....

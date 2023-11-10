@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Section1aSkills from '../skillsSections/section1/Section1aSkills';
 import Section1bSkills from '../skillsSections/section1/Section1bSkills';
 import Section1cSkills from '../skillsSections/section1/Section1cSkills'
+import Section1dSkills from '../skillsSections/section1/Section1dSkills'
 
 import {determineGeneratorObject} from '../utils/generateQuestions'
 
@@ -64,7 +65,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
       <div>
         <h2>Practice Skills</h2>
         <p>Pick a type of problem to practice on. There is no timer, just keep working problems and at the end you can see how you did.</p>
-        <button onClick={handleSkillStart}>Start Skill Practice</button>
+        <button onClick={handleSkillStart}>Start Multiplication Practice</button>
         {/* Section1aSkills handles its own skill selection */}
         <Section1aSkills
           selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
@@ -73,6 +74,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
             setCurrentSection('section1a');
           }}
         />
+        <button onClick={handleSkillStart}>Start Factoring Practice</button>
         <Section1bSkills
             selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
             onSkillChange={(e) => {
@@ -80,11 +82,20 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
                 setCurrentSection('section1b');
             }}
         />
+        <button onClick={handleSkillStart}>Start Mixed Number Practice</button>
         <Section1cSkills
             selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
             onSkillChange={(e) => {
                 setSelectedSkill(e.target.value);
                 setCurrentSection('section1c');
+            }}
+        />
+        <button onClick={handleSkillStart}>Start Remainders Practice</button>
+        <Section1dSkills
+            selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
+            onSkillChange={(e) => {
+                setSelectedSkill(e.target.value);
+                setCurrentSection('section1d');
             }}
         />
         {/* ... other sections ... */}
