@@ -13,6 +13,7 @@ const LearningPage = () => {
           <h2 className="card-title">External Resources</h2>
           <h3>Books</h3>
           <p>Bryant Heath wrote a wonderful book several years ago about number sense tricks which is available for free on his website:</p>
+          <p>If you need to find a trick for a less common type of problem, you should definitely dig through the book, I'll do my best to keep all of the absolutely necessary ones here.</p>
           <a href="https://bryantheath.com/files/2018/04/Heath_NSTricks_revA.pdf" 
              className="btn btn-primary mb-3"
              target="_blank" 
