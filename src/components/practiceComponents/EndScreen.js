@@ -27,7 +27,6 @@ const EndScreen = ({ score, answers, startGame, goToHome }) => {
         </table>
       </div>
       <div className="my-4">
-        <button onClick={startGame} className="btn btn-primary mx-2">Play Again</button>
         <button onClick={goToHome} className="btn btn-secondary mx-2">Back to Practice</button>
       </div>
     </div>
