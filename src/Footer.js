@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext }  from 'react';
 import { Link } from 'react-router-dom';
+import ThemeContext from './components/helper/ThemeContext';
+
 
 const Footer = () => {
+  const { darkTheme } = useContext(ThemeContext);
+  console.log("theme: ",darkTheme)
   return (
-    <footer className="bg-light text-center text-lg-start">
+    <footer className={`text-center text-lg-start ${darkTheme ? 'bg-dark text-white' : 'bg-light text-dark'}`}>
       <div className="container p-4">
         <div className="row">
           <div className="col-lg-6 col-md-12 mb-4 mb-md-0">

@@ -95,3 +95,12 @@ nav a.active {
   opacity: 1;
   transition: opacity 300ms ease-in;
 }
+
+.nav-tabs-dark .nav-item .nav-link {
+  background-color: #343a40; /* Dark background */
+  color: #ffffff; /* Light text */
+}
+
+.nav-tabs-dark .nav-item .nav-link.active {
+  background-color: #495057; /* Even darker background for active tab */
+}
