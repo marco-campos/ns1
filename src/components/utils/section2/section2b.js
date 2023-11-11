@@ -55,7 +55,7 @@ export function romanNumeral() {
     const romanNumeral = convertToRoman(number);
     return {
       question: `${romanNumeral} = \\text{(Arabic Numeral)}`,
-      solution: number,
+      solution: String(number),
     };
   }
 

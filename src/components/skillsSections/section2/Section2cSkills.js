@@ -16,7 +16,7 @@ const s2cSkills = [
 const Section2cSkills = ({ selectedSkill, onSkillChange }) => {
   return (
     <fieldset className="p-3">
-      <legend className="w-auto px-2">Section 1a: Multiplication</legend>
+      <legend className="w-auto px-2">Section 2c: Summation Formulas</legend>
       <div className="d-flex flex-wrap justify-content-center">
         {s2cSkills.map((skill) => (
           <div key={skill.value} className="skill-option m-2">

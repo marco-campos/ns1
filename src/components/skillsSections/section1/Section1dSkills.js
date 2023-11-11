@@ -14,7 +14,7 @@ const Section1dSkills = ({ selectedSkill, onSkillChange }) => {
 console.log(selectedSkill)
 return (
   <fieldset className="p-3">
-    <legend className="w-auto px-2">Section 1a: Multiplication</legend>
+    <legend className="w-auto px-2">Section 1d: Remainder Tricks</legend>
     <div className="d-flex flex-wrap justify-content-center">
       {s1dSkills.map((skill) => (
         <div key={skill.value} className="skill-option m-2">

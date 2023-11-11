@@ -12,7 +12,7 @@ const s2bSkills = [
 const Section2bSkills = ({ selectedSkill, onSkillChange }) => {
   return (
     <fieldset className="p-3">
-      <legend className="w-auto px-2">Section 1a: Multiplication</legend>
+      <legend className="w-auto px-2">Section 2b: Memorization Applications</legend>
       <div className="d-flex flex-wrap justify-content-center">
         {s2bSkills.map((skill) => (
           <div key={skill.value} className="skill-option m-2">
