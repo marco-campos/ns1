@@ -4,11 +4,11 @@ import React from 'react';
 // Rest of your imports
 // ...
 
-const Lesson1a = () => {
+const Lesson1b = () => {
     return (
         <div className="card">
             <div className="card-body">
-                <h5 className="card-title">Multiplication Tricks</h5>
+                <h5 className="card-title">Factoring</h5>
                 
                 <p>Coming soon..</p>
             </div>
@@ -16,4 +16,4 @@ const Lesson1a = () => {
     );
 }
 
-export default Lesson1a;
+export default Lesson1b;

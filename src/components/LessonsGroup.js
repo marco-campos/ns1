@@ -1,6 +1,10 @@
 import React from 'react';
-import AccordionLearn from './accordions/AccordionLearn'
+import AccordionLearn from './helper/AccordionLearn'
 import Lesson1a from './lessons/lesson1/Lesson1a'
+import Lesson1b from './lessons/lesson1/Lesson1b';
+import Lesson1c from './lessons/lesson1/Lesson1c';
+import Lesson1d from './lessons/lesson1/Lesson1d'
+
 import Lesson2a from './lessons/lesson2/Lesson2a'
 import Lesson2b from './lessons/lesson2/Lesson2b'
 import Lesson2c from './lessons/lesson2/Lesson2c'
@@ -47,12 +51,10 @@ const LessonsGroup = () => {
           aria-labelledby="section1-tab"
         >
           <div className="accordion" id="accordionSection1">
-            <AccordionLearn section={"1a"} content={
-              <Lesson1a />
-            } />
-            <AccordionLearn section={"1b"} content={"Coming Soon"} />
-            <AccordionLearn section={"1c"} content={"Coming Soon"} />
-            <AccordionLearn section={"1d"} content={"Coming Soon"} />
+            <AccordionLearn section={"1a"} content={<Lesson1a /> } />
+            <AccordionLearn section={"1b"} content={<Lesson1b /> } />
+            <AccordionLearn section={"1c"} content={<Lesson1c /> } />
+            <AccordionLearn section={"1d"} content={<Lesson1d /> } />
           </div>
         </div>
 
