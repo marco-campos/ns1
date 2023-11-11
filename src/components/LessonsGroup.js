@@ -1,6 +1,9 @@
 import React from 'react';
 import AccordionLearn from './accordions/AccordionLearn'
 import Lesson1a from './lessons/lesson1/Lesson1a'
+import Lesson2a from './lessons/lesson2/Lesson2a'
+import Lesson2b from './lessons/lesson2/Lesson2b'
+import Lesson2c from './lessons/lesson2/Lesson2c'
 
 const LessonsGroup = () => {
   return (
@@ -61,9 +64,9 @@ const LessonsGroup = () => {
         >
           {/* Accordion for Section 2 */}
           <div className="accordion" id="accordionSection2">
-            <AccordionLearn section={"2a"} content={"Coming Soon"} />
-            <AccordionLearn section={"2b"} content={"Coming Soon"} />
-            <AccordionLearn section={"2c"} content={"Coming Soon"} />
+            <AccordionLearn section={"2a"} content={<Lesson2a/>} />
+            <AccordionLearn section={"2b"} content={<Lesson2b/>} />
+            <AccordionLearn section={"2c"} content={<Lesson2c />} />
           </div>
         </div>
       </div>
