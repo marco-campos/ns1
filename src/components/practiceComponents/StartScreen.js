@@ -224,7 +224,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
     </div>
     <div className="my-4">
         <h3>Coming Soon!</h3>
-        <h4>Memorization Applications</h4>
+        <h4>More Memorization Applications</h4>
         <h4>Fibonacci Numbers</h4>
         <h4>Integral Divisors</h4>
         {/* ... upcoming sections ... */}
