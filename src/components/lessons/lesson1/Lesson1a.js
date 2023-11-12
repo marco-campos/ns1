@@ -22,7 +22,7 @@ const Lesson1a = () => {
                                 <TextDisplay text={`\\text{Units: } 8 \\times 4 = 3 \\color{green} 2 \\color{black} \\text{ (write down 2, carry 3)}`} />
                             </li>
                             <li>
-                                <TextDisplay text={`\\text{Tens: } 5 \\times 4 + 8 \\times 3 + 3 = 4 \\color{green} 9 \\color{black} \\text{ (write down 9, carry 4)}`} />
+                                <TextDisplay text={`\\text{Tens: } 5 \\times 4 + 8 \\times 3 + 3 = 4 \\color{green} 7 \\color{black} \\text{ (write down 7, carry 4)}`} />
                             </li>
                             <li>
                                 <TextDisplay text={`\\text{Hundreds: } 5 \\times 3 + 4 = 19`} />
