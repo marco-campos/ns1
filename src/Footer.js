@@ -56,6 +56,11 @@ const Footer = () => {
                 <i className="fab fa-github"></i> GitHub
                 </a>
             </li>
+            <li>
+              <a href="https://discord.gg/wUWwzbFw" className="text-dark" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-discord"></i> Discord Server
+              </a>
+            </li>
               {/* Add additional contact methods as needed */}
             </ul>
           </div>
