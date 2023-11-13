@@ -42,7 +42,107 @@ My goal is to have a webapp where to students can practice their number sense an
 - Platonic solis
 - pi and e approximations
 - distance and velocity conversions
+    - ***
 - conversions of distance, area and volume
+    - ****
 - fluid and weight conversions
+    - ****
 - celsius to fahrenheit
 - sum of alternating squares
+- fibonacci stuff
+    - *** At least put in a chart for memorization.
+- integral divisors
+    - *** should probably implement this.
+- exterior/interior angles
+- triangular, pentagonal, etc numbers.
+- sides of a triangle
+- equilaterla triangle
+- solids formulas
+    - ***
+- Combinations and Permutations 
+    - Easy to implement.
+- Trig values
+    - *** 
+- Trig formulas
+- Graphs of Trig
+- parabola vertex
+- discriminant + roots
+- GCD LCM 
+    - *** important
+- sum of coefficients in an expansion.
+- sum/products of roots 
+    - *** very important, also for a math test.
+- units digit x^n
+- exponent rules
+- log rules
+- square root problems 
+    - ***
+- complex numbers
+- powers of i
+- function inverses
+- patterns
+    - *** Kind of hard, but might just hardcode a couple of patterns and randomize the term picked.
+- probability/odds
+- sets 
+    - *** Might be hard.
+- Changing bases
+    - *** Probably not super hard, will be a bit annoying I think though.
+    - converting to, from and between
+- converting decimals
+- bases with operations
+- other bases stuff
+- repeating decimals
+    - *** super important. very easy to implement, several questions too with simple formulas.
+- modular arithmetic
+- factorial sums
+- wilson's theorem
+- limits
+- derivatives
+- integrals
+- binomial approx
+- more conversions (4.2.1)
+- Special defns of numbers
+- square root approximations
+    - * Might be easy to just tack on.
+
+## TODO
+
+### Section 1: Arithmetic
+### Section 2: Memorization
+- square root problems 
+    - ***
+- distance and velocity conversions
+    - ***
+- conversions of distance, area and volume
+    - ****
+- fluid and weight conversions
+    - ****
+- fibonacci stuff
+    - *** At least put in a chart for memorization.
+
+### Section 3: Algebra + Geometry
+- integral divisors
+    - *** should probably implement this.
+- Combinations and Permutations 
+    - Easy to implement.
+- solids formulas
+    - ***
+- GCD LCM 
+    - *** important
+- sum of coefficients in an expansion.
+- sum/products of roots 
+    - *** very important, also for a math test.
+- repeating decimals
+    - *** super important. very easy to implement, several questions too with simple formulas.
+### Section 4: Pre-calculus
+- Trig values
+    - *** 
+- Trig formulas
+- patterns
+    - *** Kind of hard, but might just hardcode a couple of patterns and randomize the term picked.
+- sets 
+    - *** Might be hard.
+- Changing bases
+    - *** Probably not super hard, will be a bit annoying I think though.
+    - converting to, from and between
+### Section 5: Calculus
