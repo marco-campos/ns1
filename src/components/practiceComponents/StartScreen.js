@@ -330,7 +330,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
         
       </div>
     </div>
-    <div className="my-4">
+      <div className="my-4">
         <h3>Coming Soon!</h3>
         <ul>
           <li>Conversion Problems (distance, velocity, area, volume, fluid, weight)</li>
@@ -345,6 +345,11 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
         </ul>
         {/* ... upcoming sections ... */}
       </div>
+
+      <div className="my-4">
+        <h3>Requests, Bug Fixes, Questions? Post on the discord!</h3>
+      </div>
+
       
     </div>
   );

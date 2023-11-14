@@ -19,7 +19,7 @@ export function primeIntegralDivisors() {
     factors.sort((a, b) => a - b);
     
     // Construct the question string
-    question = `Find the number of prime integral divisors of ${number}.`;
+    question = `\\text{Find the number of prime integral divisors of } ${number}.`;
     
     // The answer is the count of distinct prime factors
     const distinctFactors = [...new Set(factors)];
