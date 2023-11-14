@@ -332,9 +332,17 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
     </div>
     <div className="my-4">
         <h3>Coming Soon!</h3>
-        <h4>More Memorization Applications</h4>
-        <h4>Fibonacci Numbers</h4>
-        <h4>Integral Divisors</h4>
+        <ul>
+          <li>Conversion Problems (distance, velocity, area, volume, fluid, weight)</li>
+          <li>fibonacci tricks/memorization tips</li>
+          <li>More integral divisor problems</li>
+          <li>Combinations + Permutations</li>
+          <li>GCD/LCM</li>
+          <li>Trig values</li>
+          <li>Trig formulas</li>
+          <li>Sets</li>
+          <li>Arithmetic with changes of bases</li>
+        </ul>
         {/* ... upcoming sections ... */}
       </div>
       
