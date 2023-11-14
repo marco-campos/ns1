@@ -8,8 +8,11 @@ import Section2aSkills from '../skillsSections/section2/Section2aSkills'
 import Section2bSkills from '../skillsSections/section2/Section2bSkills'
 import Section2cSkills from '../skillsSections/section2/Section2cSkills'
 
-
+import SectionSkills from '../helper/SectionSkills';
 import {determineGeneratorObject} from '../utils/generateQuestions'
+import {s3aSkills} from '../utils/section3/section3a'
+import {s3bSkills} from '../utils/section3/section3b'
+
 
 const StartScreen = ({ startGame, startSkillPractice }) => {
   const [timeOption, setTimeOption] = useState(600); // Default 10 minutes
@@ -85,6 +88,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
         <div className="mb-3">
         <h3>Section 1: Basic Arithmetic Tricks</h3>
         <div class="accordion accordion-flush" id="accordionFlushExample">
+        
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -103,6 +107,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
               </div>
             </div>
           </div>
+
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
@@ -121,6 +126,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
               </div>
             </div>
           </div>
+  
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
@@ -139,6 +145,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
               </div>
             </div>
           </div>
+          
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
@@ -219,6 +226,56 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
           </div>
           </div>
         </div>
+
+
+        {/* Section 3 */}
+
+        <div className="mb-3">
+        <h3>Section 3: Algebra + Geometry</h3>
+        <div class="accordion accordion-flush" id="accordionFlushP3">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                Sum and Product of Roots
+              </button>
+            </h2>
+            <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushP3">
+              <div class="accordion-body">
+                  <SectionSkills 
+                    sXskills={s3aSkills}
+                    title={'Section 3a: Sum and Product of Roots of Polynomials'}
+                    selectedSkill={selectedSkill}
+                    onSkillChange={(e) => {
+                      setSelectedSkill(e.target.value);
+                      setCurrentSection('section3a');
+                  }}/>
+              </div>
+            </div>
+          </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                  Questions on Divisors
+                </button>
+              </h2>
+              <div id="flush-collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionFlushP3">
+                <div class="accordion-body">
+                  <SectionSkills
+                    sXskills={s3bSkills}
+                    title={'Section 3b: Divisor tricks'}
+                    selectedSkill={selectedSkill}
+                    onSkillChange={(e) => {
+                      setSelectedSkill(e.target.value);
+                      setCurrentSection('section3b');
+                  }}/>
+                </div>
+              </div>
+            </div>
+
+          
+          </div>
+          </div>
         
       </div>
     </div>
