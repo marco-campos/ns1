@@ -133,7 +133,6 @@ My goal is to have a webapp where to students can practice their number sense an
 - sets 
     - *** Might be hard.
 - Changing bases
-    - *** Probably not super hard, will be a bit annoying I think though.
-    - converting to, from and between
+   - operations, decimals, and special trick
 ### Section 5: Calculus
 - Basic Derivatives

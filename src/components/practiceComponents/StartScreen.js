@@ -13,6 +13,8 @@ import {determineGeneratorObject} from '../utils/generateQuestions'
 import {s3aSkills} from '../utils/section3/section3a'
 import {s3bSkills} from '../utils/section3/section3b'
 import {s3cSkills} from '../utils/section3/section3c'
+import {s4aSkills} from '../utils/section4/section4a'
+
 
 
 const StartScreen = ({ startGame, startSkillPractice }) => {
@@ -232,28 +234,28 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
         {/* Section 3 */}
 
         <div className="mb-3">
-        <h3>Section 3: Algebra + Geometry</h3>
-        <div class="accordion accordion-flush" id="accordionFlushP3">
+          <h3>Section 3: Algebra + Geometry</h3>
+          <div class="accordion accordion-flush" id="accordionFlushP3">
 
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
-                Repeating Decimal Tricks
-              </button>
-            </h2>
-            <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushP3">
-              <div class="accordion-body">
-                  <SectionSkills 
-                    sXskills={s3aSkills}
-                    title={'Section 3a: Sum and Product of Roots of Polynomials'}
-                    selectedSkill={selectedSkill}
-                    onSkillChange={(e) => {
-                      setSelectedSkill(e.target.value);
-                      setCurrentSection('section3a');
-                  }}/>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                  Repeating Decimal Tricks
+                </button>
+              </h2>
+              <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushP3">
+                <div class="accordion-body">
+                    <SectionSkills 
+                      sXskills={s3aSkills}
+                      title={'Section 3a: Sum and Product of Roots of Polynomials'}
+                      selectedSkill={selectedSkill}
+                      onSkillChange={(e) => {
+                        setSelectedSkill(e.target.value);
+                        setCurrentSection('section3a');
+                    }}/>
+                </div>
               </div>
             </div>
-          </div>
 
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -293,11 +295,38 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
                   }}/>
                 </div>
               </div>
-            </div>
+            </div>         
+          </div>
+        </div>
 
-          
+      {/* Section 4 */}
+
+        <div className="mb-3">
+          <h3>Section 4: Precalculus + Misc Topics</h3>
+          <div class="accordion accordion-flush" id="accordionFlushP4">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse11" aria-expanded="false" aria-controls="flush-collapse11">
+                  Change of Bases
+                </button>
+              </h2>
+              <div id="flush-collapse11" class="accordion-collapse collapse" data-bs-parent="#accordionFlushP4">
+                <div class="accordion-body">
+                    <SectionSkills 
+                      sXskills={s4aSkills}
+                      title={'Section 4a: Change of Bases'}
+                      selectedSkill={selectedSkill}
+                      onSkillChange={(e) => {
+                        setSelectedSkill(e.target.value);
+                        setCurrentSection('section4a');
+                    }}/>
+                </div>
+              </div>
+            </div>
+            
           </div>
-          </div>
+        </div>
         
       </div>
     </div>
