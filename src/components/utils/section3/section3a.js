@@ -1,84 +1,82 @@
-function sum_product_roots() {
-    const degree = Math.random() > 0.5 ? 2 : 3;
-    const a = Math.floor(Math.random() * 9) + 1; // Coefficient for x^2 or x^3, 1 to 9
-    let b = Math.floor(Math.random() * 19) - 9; // Coefficient for x or x^2, -9 to 9
-    while (b===0 || b ===1){
-        b = Math.floor(Math.random() * 19) - 9;
-    }
-    let c = Math.floor(Math.random() * 19) - 9; // Coefficient for constant or x, -9 to 9
-    while (c===0 || c===1){
-        c= Math.floor(Math.random() * 19) - 9;
-    }
-    let d = degree === 3 ? Math.floor(Math.random() * 19) - 9 : null; // Coefficient for constant if cubic, -9 to 9
-    while (d===0 || d===1){
-        d= Math.floor(Math.random() * 19) - 9;
-    }
-    
-    let b_str
-    if (b>0){
-        b_str = `+${b}`
-    }else{
-        b_str = b
-    }
-    let c_str
-    if (c>0){
-        c_str = `+${c}`
-    }else{
-        c_str = c
-    }
-    let d_str
-    if (d>0){
-        d_str = `+${d}`
-    }else{
-        d_str = d
-    }
-    const polynomial = degree === 2
-      ? `x^2 ${b_str}x ${c_str}`
-      : `x^3 ${c_str}x^2 ${c_str}x ${d_str}`;
-  
-    let questionType
-    if (degree === 2){
-        questionType = Math.random() > 0.5 ? "sum" : "product";}
-    else{
-            const options = ["sum", "sum2", "product"];
-            questionType = Math.floor(Math.random() * options.length);        
-    }
-
-  
-    let question, solution;
-  
-    if (degree === 2) {
-      if (questionType === "sum") {
-        question = ` \\text{ The sum of the roots of }${polynomial} = 0 \\text{ is:}`;
-        solution = `${-b}/${a}`;
-      } else {
-        question = ` \\text{The product of the roots of }${polynomial} = 0 \\text{ is:}`;
-        solution = `${c}/${a}`;
-      }
-    } else {
-      if (questionType === "sum") {
-        question = ` \\text{The sum of the roots of }${polynomial} = 0 \\text{ is:}`;
-        solution = `${-b}/${a}`;
-      } else if (questionType ==="sum2"){
-        question = ` \\text{The sum of the roots taken two at a time of }${polynomial} = 0 \\text{ is:}`;
-        solution = `${c}/${a}`;
-      }else {
-        question = ` \\text{The product of the roots of }${polynomial} = 0 \\text{ is:}`;
-        solution = `${-d}/${a}`;
-      }
-    }
-  
+// Simplify a fraction
+export function simplifyFraction(numerator, denominator) {
+    const gcd = (a, b) => b === 0 ? a : gcd(b, a % b);
+    const greatestCommonDivisor = gcd(numerator, denominator);
     return {
-        question: question,
-        solution: solution,
+        numerator: numerator / greatestCommonDivisor,
+        denominator: denominator / greatestCommonDivisor
     };
 }
 
+export function dot_aaaa() {
+    const num1 = Math.floor(Math.random() * 8) + 1
+    const question = `.${num1}${num1}${num1}${num1}... \\text{can be written as: (fraction)}`;
+    const fraction = simplifyFraction(num1, 9)
+    const answer = `${fraction.numerator}/${fraction.denominator}`;
+    const pair = {
+      question: question,
+      solution: answer,
+    };
+    return pair
+}
+
+
+export function dot_abab() {
+    const num1 = Math.floor(Math.random() * 9) + 1
+    const num2 = Math.floor(Math.random() * 9) + 1
+    const ab = 10 * num1 + num2
+    const question = `.${num1}${num2}${num1}${num2}... \\text{can be written as: (fraction)}`;
+    const fraction = simplifyFraction(ab, 99)
+    const answer = `${fraction.numerator}/${fraction.denominator}`;
+    const pair = {
+      question: question,
+      solution: answer,
+    };
+    return pair
+}
+
+export function dot_abbb() {
+    const num1 = Math.floor(Math.random() * 9) + 1
+    const num2 = Math.floor(Math.random() * 9) + 1
+    const top = 10 * num1 + num2 - num1;
+    const question = `.${num1}${num2}${num2}${num2}... \\text{can be written as: (fraction)}`;
+    const fraction = simplifyFraction(top, 90)
+    const answer = `${fraction.numerator}/${fraction.denominator}`;
+    const pair = {
+      question: question,
+      solution: answer,
+    };
+    return pair
+}
+
+export function dot_abcbc() {
+    const num1 = Math.floor(Math.random() * 9) + 1
+    const num2 = Math.floor(Math.random() * 9) + 1
+    const num3 = Math.floor(Math.random() * 9) + 1
+
+    const top = 100 * num1 + 10*num2 +num3- num1;
+    const question = `.${num1}${num2}${num3}${num2}${num3}... \\text{can be written as: (fraction)}`;
+    const fraction = simplifyFraction(top, 990)
+    const answer = `${fraction.numerator}/${fraction.denominator}`;
+    const pair = {
+      question: question,
+      solution: answer,
+    };
+    return pair
+}
+
 export const generator3a = {
-    'sum_product_roots': sum_product_roots
+    // 'sum_product_roots': sum_product_roots,
+    'dot_aaaa':dot_aaaa,
+    'dot_abab': dot_abab,
+    'dot_abbb': dot_abbb,
+    'dot_abcbc': dot_abcbc
+
 }
 
 export const s3aSkills = [
-    { value: 'sum_product_roots', label: 'Sum and Product of Roots of a polynomial' },
-    
-  ];
+    { value: 'dot_aaaa', label: 'Converting .aaa... to a fraction' },
+    { value: 'dot_abab', label: 'Converting .abab... to a fraction' },
+    { value: 'dot_abbb', label: 'Converting .abbb... to a fraction' },
+    { value: 'dot_abcbc', label: 'Converting .abcbc... to a fraction' },
+];

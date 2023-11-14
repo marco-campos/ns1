@@ -107,12 +107,12 @@ export function sumOfIntegralDivisors() {
 export const generator3b = {
     'primeIntegralDivisors': primeIntegralDivisors,
     'numOfIntegralDivisors':numOfIntegralDivisors,
-    'sumOfIntegralDivisors':sumOfIntegralDivisors
+    //'sumOfIntegralDivisors':sumOfIntegralDivisors
 }
 
 export const s3bSkills = [
     { value: 'primeIntegralDivisors', label: 'Number of Prime Integral Divisors' },
     { value: 'numOfIntegralDivisors', label: 'Number of Integral Divisors' },
-    { value: 'sumOfIntegralDivisors', label: 'Sum of Integral Divisors' },
+    //{ value: 'sumOfIntegralDivisors', label: 'Sum of Integral Divisors' },
   ];
   

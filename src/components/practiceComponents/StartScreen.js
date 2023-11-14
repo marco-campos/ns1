@@ -12,6 +12,7 @@ import SectionSkills from '../helper/SectionSkills';
 import {determineGeneratorObject} from '../utils/generateQuestions'
 import {s3aSkills} from '../utils/section3/section3a'
 import {s3bSkills} from '../utils/section3/section3b'
+import {s3cSkills} from '../utils/section3/section3c'
 
 
 const StartScreen = ({ startGame, startSkillPractice }) => {
@@ -233,10 +234,11 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
         <div className="mb-3">
         <h3>Section 3: Algebra + Geometry</h3>
         <div class="accordion accordion-flush" id="accordionFlushP3">
+
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
-                Sum and Product of Roots
+                Repeating Decimal Tricks
               </button>
             </h2>
             <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushP3">
@@ -268,6 +270,26 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
                     onSkillChange={(e) => {
                       setSelectedSkill(e.target.value);
                       setCurrentSection('section3b');
+                  }}/>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                  Questions about Polynomials
+                </button>
+              </h2>
+              <div id="flush-collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushP3">
+                <div class="accordion-body">
+                  <SectionSkills
+                    sXskills={s3cSkills}
+                    title={'Section 3c: Polynomial tricks'}
+                    selectedSkill={selectedSkill}
+                    onSkillChange={(e) => {
+                      setSelectedSkill(e.target.value);
+                      setCurrentSection('section3c');
                   }}/>
                 </div>
               </div>

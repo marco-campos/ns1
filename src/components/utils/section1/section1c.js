@@ -87,14 +87,14 @@ export const mixedFoil1 = () => {
 };
 
 // Simplify a fraction
-function simplifyFraction(numerator, denominator) {
+export function simplifyFraction(numerator, denominator) {
     const gcd = (a, b) => b === 0 ? a : gcd(b, a % b);
     const greatestCommonDivisor = gcd(numerator, denominator);
     return {
         numerator: numerator / greatestCommonDivisor,
         denominator: denominator / greatestCommonDivisor
     };
-    }
+}
 
 export const axaOverb = () => {
     // Ensure a difference of no more than 10 between a and b

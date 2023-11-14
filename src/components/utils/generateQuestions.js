@@ -17,6 +17,8 @@ import { generator2b } from './section2/section2b'
 import { generator2c } from './section2/section2c'
 import { generator3a } from './section3/section3a';
 import { generator3b } from './section3/section3b';
+import { generator3c } from './section3/section3c';
+
 
 export function generateQuestionsWithSolutions(numberOfQuestions) {
   let questionsWithSolutions = [];
@@ -66,6 +68,8 @@ export const determineGeneratorObject = (skillToPractice) => {
       return generator3a
     case 'section3b':
       return generator3b
+    case 'section3c':
+      return generator3c
     // ... other cases for other sections
     
     default:

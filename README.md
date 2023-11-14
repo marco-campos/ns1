@@ -104,7 +104,7 @@ My goal is to have a webapp where to students can practice their number sense an
 - Special defns of numbers
 - square root approximations
     - * Might be easy to just tack on.
-
+- A bunch of the integral divisors questions
 ## TODO
 
 ### Section 1: Arithmetic
@@ -125,8 +125,6 @@ My goal is to have a webapp where to students can practice their number sense an
 - GCD LCM 
     - *** important
 - sum of coefficients in an expansion.
-- repeating decimals
-    - *** super important. very easy to implement, several questions too with simple formulas.
 ### Section 4: Pre-calculus
 - Trig values
 - Trig formulas
