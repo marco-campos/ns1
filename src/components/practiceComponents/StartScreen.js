@@ -8,6 +8,7 @@ import { s1aSkills } from '../utils/section1/section1a';
 import { s1bSkills } from '../utils/section1/section1b'
 import { s1cSkills } from '../utils/section1/section1c';
 import { s1dSkills } from '../utils/section1/section1d';
+import { s1eSkills } from '../utils/section1/section1e'
 
 import { s2aSkills } from '../utils/section2/section2a';
 import { s2bSkills } from '../utils/section2/section2b';
@@ -16,6 +17,8 @@ import { s2cSkills } from '../utils/section2/section2c';
 import {s3aSkills} from '../utils/section3/section3a'
 import {s3bSkills} from '../utils/section3/section3b'
 import {s3cSkills} from '../utils/section3/section3c'
+import { s3dSkills } from '../utils/section3/section3d';
+
 import {s4aSkills} from '../utils/section4/section4a'
 
 
@@ -134,6 +137,16 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
                     setCurrentSection('section1d');
                 }}/>}
             />
+            <PracticeAccordionSection 
+              title={"GCD and LCM Problems"} section={"1"} index={"5"}
+              content={<SectionSkills 
+                sXskills={s1eSkills} title={'Section 1e: GCD and LCM Problems'} selectedSkill={selectedSkill}
+                onSkillChange={(e) => {
+                  setSelectedSkill(e.target.value);
+                  setCurrentSection('section1e');
+              }}
+              />}
+            />
 
           </div>
         </div>
@@ -143,7 +156,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
           <div class="accordion accordion-flush" id="accordionFlushP2">
 
             <PracticeAccordionSection 
-              title={"Basic Memorization"} section={"2"} index={"5"}
+              title={"Basic Memorization"} section={"2"} index={"6"}
               content={<SectionSkills
                 sXskills={s2aSkills} title={'Section 2a: Memorization'}selectedSkill={selectedSkill}
                 onSkillChange={(e) => {
@@ -153,7 +166,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
             />
 
             <PracticeAccordionSection 
-              title={"Memorization Applications"} section={"2"} index={"6"}
+              title={"Memorization Applications"} section={"2"} index={"7"}
               content={<SectionSkills
                 sXskills={s2bSkills} title={'Section 2b: Memorization Applications'} selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
                 onSkillChange={(e) => {
@@ -163,7 +176,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
             />
 
             <PracticeAccordionSection 
-              title={"Series"} section={"2"} index={"7"}
+              title={"Series"} section={"2"} index={"8"}
               content={<SectionSkills
                 sXskills={s2cSkills} title={'Section 2c: Summation Formulas'} selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
                 onSkillChange={(e) => {
@@ -183,7 +196,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
           <div class="accordion accordion-flush" id="accordionFlushP3">
 
             <PracticeAccordionSection 
-              title={"Repeating Decimal Tricks"} section={"3"} index={"8"}
+              title={"Repeating Decimal Tricks"} section={"3"} index={"9"}
               content={<SectionSkills 
                 sXskills={s3aSkills}
                 title={'Section 3a: Sum and Product of Roots of Polynomials'}
@@ -195,7 +208,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
             />
 
             <PracticeAccordionSection 
-              title={"Questions on Divisors"} section={"3"} index={"9"}
+              title={"Questions on Divisors"} section={"3"} index={"10"}
               content={<SectionSkills
                 sXskills={s3bSkills} title={'Section 3b: Divisor tricks'} selectedSkill={selectedSkill}
                 onSkillChange={(e) => {
@@ -205,7 +218,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
             />
 
             <PracticeAccordionSection 
-              title={"Questions about Polynomials"} section={"3"} index={"10"}
+              title={"Questions about Polynomials"} section={"3"} index={"11"}
               content={<SectionSkills
                 sXskills={s3cSkills} title={'Section 3c: Polynomial tricks'} selectedSkill={selectedSkill}
                 onSkillChange={(e) => {
@@ -213,6 +226,17 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
                   setCurrentSection('section3c');
               }}/>}
             />      
+
+            <PracticeAccordionSection 
+              title={"Combinations and Permutations"} section={"3"} index={"12"}
+              content={<SectionSkills
+                sXskills={s3dSkills} title={'Section 3d: Calculating Combinations and Permutations'} selectedSkill={selectedSkill}
+                onSkillChange={(e) => {
+                  setSelectedSkill(e.target.value);
+                  setCurrentSection('section3d');
+              }}/>}
+            />   
+
           </div>
         </div>
 
@@ -222,7 +246,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
           <h3>Section 4: Precalculus + Misc Topics</h3>
           <div class="accordion accordion-flush" id="accordionFlushP4">
             <PracticeAccordionSection
-              title={"Change of Bases"} section={"4"} index={"11"}
+              title={"Change of Bases"} section={"4"} index={"13"}
               content={<SectionSkills 
                 sXskills={s4aSkills}
                 title={'Section 4a: Change of Bases'}
@@ -243,8 +267,6 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
           <li>Conversion Problems (distance, velocity, area, volume, fluid, weight)</li>
           <li>fibonacci tricks/memorization tips</li>
           <li>More integral divisor problems</li>
-          <li>Combinations + Permutations</li>
-          <li>GCD/LCM</li>
           <li>Trig values</li>
           <li>Trig formulas</li>
           <li>Sets</li>
