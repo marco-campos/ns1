@@ -1,20 +1,27 @@
 import React from 'react';
 
-const PracticeAccordionSection = ({ SectionComponent, sectionTitle, pageIndex }) => {
-    return(
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse${pageIndex}`} aria-expanded="false" aria-controls={`flush-collapse${pageIndex}`}>
-                {sectionTitle}
-                </button>
+const PracticeAccordionSection = ({ title, section, index, content }) => {
+    return (
+          <div className="accordion-item">
+            <h2 className="accordion-header">
+              <button
+                className="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target={`#flush-collapse${index}`}
+                aria-expanded="false"
+                aria-controls={`flush-collapse${index}`}
+              >
+                {title}
+              </button>
             </h2>
-            <div id={`flush-collapse${pageIndex}`} class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                {SectionComponent}
-                </div>
+            <div id={`flush-collapse${index}`} className="accordion-collapse collapse" data-bs-parent={`#accordionFlushP${section}`}>
+              <div className="accordion-body">
+                {content}
+              </div>
             </div>
-        </div>
-    )
-}
-
+          </div>
+    );
+  };
+  
 export default PracticeAccordionSection

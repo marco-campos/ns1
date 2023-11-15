@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Section1aSkills from '../skillsSections/section1/Section1aSkills';
+
+import PracticeAccordionSection from '../helper/PracticeAccordionSection';
 import Section1bSkills from '../skillsSections/section1/Section1bSkills';
 import Section1cSkills from '../skillsSections/section1/Section1cSkills'
 import Section1dSkills from '../skillsSections/section1/Section1dSkills'
@@ -10,6 +11,9 @@ import Section2cSkills from '../skillsSections/section2/Section2cSkills'
 
 import SectionSkills from '../helper/SectionSkills';
 import {determineGeneratorObject} from '../utils/generateQuestions'
+
+import { s1aSkills } from '../utils/section1/section1a';
+
 import {s3aSkills} from '../utils/section3/section3a'
 import {s3bSkills} from '../utils/section3/section3b'
 import {s3cSkills} from '../utils/section3/section3c'
@@ -100,13 +104,15 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
-              <Section1aSkills
-                selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
-                onSkillChange={(e) => {
-                  setSelectedSkill(e.target.value);
-                  setCurrentSection('section1a');
-                }}
-              />
+                <SectionSkills
+                  sXskills={s1aSkills}
+                  title={'Section 1a: Multiplication Tricks'}
+                  selectedSkill={selectedSkill}
+                  onSkillChange={(e) => {
+                    setSelectedSkill(e.target.value);
+                    setCurrentSection('section1a');
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -304,8 +310,19 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
         <div className="mb-3">
           <h3>Section 4: Precalculus + Misc Topics</h3>
           <div class="accordion accordion-flush" id="accordionFlushP4">
+            <PracticeAccordionSection
+              title={"Change of Bases"} section={"4"} index={"11"}
+              content={<SectionSkills 
+                sXskills={s4aSkills}
+                title={'Section 4a: Change of Bases'}
+                selectedSkill={selectedSkill}
+                onSkillChange={(e) => {
+                  setSelectedSkill(e.target.value);
+                  setCurrentSection('section4a');
+              }}/>}
+            />
 
-            <div class="accordion-item">
+            {/* <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse11" aria-expanded="false" aria-controls="flush-collapse11">
                   Change of Bases
@@ -323,7 +340,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
                     }}/>
                 </div>
               </div>
-            </div>
+            </div> */}
             
           </div>
         </div>
