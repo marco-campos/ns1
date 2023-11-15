@@ -1,10 +1,10 @@
 export function baseXto10() {
-    const num1 = Math.floor(Math.random() * 8) + 1;
-    const num2 = Math.floor(Math.random() * 8) + 1;
-    const num3 = Math.floor(Math.random() * 8) + 1;
+    const base = Math.floor(Math.random() * 8) + 2;
+    const num1 = Math.floor(Math.random() * base - 1) + 1;
+    const num2 = Math.floor(Math.random() * base - 1) + 1;
+    const num3 = Math.floor(Math.random() * base - 1) + 1;
     const num = 100 * num1 + 10 * num2 + num3;
 
-    const base = Math.floor(Math.random() * 8) + 2;
     const question = `${num}_${base} = \\text{(base 10)}`;
     const answer = String(num1 * base*base + num2 * base + num3);
     const pair = {
@@ -31,13 +31,16 @@ export function base10toX() {
 }
 
 export function baseXtoY(){
+    const base1 = Math.floor(Math.random() * 8) + 2;
     const num1 = Math.floor(Math.random() * 2) + 1;
-    const num2 = Math.floor(Math.random() * 8) + 1;
-    const num3 = Math.floor(Math.random() * 8) + 1;
+    const num2 = Math.floor(Math.random() * base1 -1) + 1;
+    const num3 = Math.floor(Math.random() * base1-1) + 1;
     const num = 100 * num1 + 10 * num2 + num3;
 
-    const base1 = Math.floor(Math.random() * 8) + 2;
-    const base2 = Math.floor(Math.random() * 8) + 2;
+    let base2 = Math.floor(Math.random() * 8) + 2;
+    while (base2 === base1){
+        base2 = Math.floor(Math.random() * 8) + 2;
+    }
     const question = `${num}_${base1} = \\text{(base ${base2})}`;
     const numXto10 = num1 * base1*base1 + num2 * base1 + num3
     const num10toY = numXto10.toString(base2)
