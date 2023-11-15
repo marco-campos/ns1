@@ -138,3 +138,10 @@ export function remainderBy3or9() {
     'complexRemainderQuestion': complexRemainderQuestion
   }
   
+  export const s1dSkills = [
+    { value: 'remainderBy2or4or8', label: 'Remainders when dividing by powers of 2' },
+    { value: 'remainderBy3or9', label: 'Remainders when dividing by 9' },
+    { value: 'remainderBy11', label: 'Remainders when dividing by 11' },
+    { value: 'remainderBy6or12or18', label: 'Remainders when dividing by 6, 12, or 18' },
+    { value: 'complexRemainderQuestion', label: 'Remainders of Expressions' },
+]

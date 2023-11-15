@@ -227,3 +227,10 @@ export const generator1c = {
     'a_bMinusNfrac2':a_bMinusNfrac2
 }
 
+export const s1cSkills = [
+    { value: 'mixedFoil1', label: 'Mixed Number Arithmetic' },
+    { value: 'axaOverb', label: 'a \\times \\frac{a}{b}' },
+    { value: 'a_bPlusb_a', label: '\\frac{a}{b} + \\frac{b}{a}' },
+    { value: 'a_bMinusNfrac1', label: '\\frac{a}{b} - \\frac{na-1}{nb+1}' },
+    { value: 'a_bMinusNfrac2', label: '\\frac{a}{b} - \\frac{na+1}{nb-1}' },
+]

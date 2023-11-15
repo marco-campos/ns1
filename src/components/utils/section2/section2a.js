@@ -47,5 +47,11 @@ export const generator2a = {
     'squareRoot': squareRoot,
     'cubes': cubes,
     'cubeRoot': cubeRoot,
-    }
-      
+}
+export const s2aSkills = [
+    { value: 'squares', label: 'Squares' },
+    { value: 'squareRoot', label: 'Square Roots' },
+    { value: 'cubes', label: 'Cubes' },
+    { value: 'cubeRoot', label: 'Cube Roots' },
+  ];
+  

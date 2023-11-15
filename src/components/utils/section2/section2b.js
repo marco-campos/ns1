@@ -64,4 +64,9 @@ export function romanNumeral() {
     'squaresPercentage': squaresPercentage,
     'romanNumeral': romanNumeral,
     }
-      
+
+  export const s2bSkills = [
+      { value: 'squaresdecimal', label: 'Squares of Decimals' },
+      { value: 'squaresPercentage', label: 'Percentage Squares' },
+      { value: 'romanNumeral', label: 'Roman Numerals' },
+    ];

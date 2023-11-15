@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 
 import PracticeAccordionSection from '../helper/PracticeAccordionSection';
-import Section1bSkills from '../skillsSections/section1/Section1bSkills';
-import Section1cSkills from '../skillsSections/section1/Section1cSkills'
-import Section1dSkills from '../skillsSections/section1/Section1dSkills'
-
-import Section2aSkills from '../skillsSections/section2/Section2aSkills'
-import Section2bSkills from '../skillsSections/section2/Section2bSkills'
-import Section2cSkills from '../skillsSections/section2/Section2cSkills'
-
 import SectionSkills from '../helper/SectionSkills';
 import {determineGeneratorObject} from '../utils/generateQuestions'
 
 import { s1aSkills } from '../utils/section1/section1a';
+import { s1bSkills } from '../utils/section1/section1b'
+import { s1cSkills } from '../utils/section1/section1c';
+import { s1dSkills } from '../utils/section1/section1d';
+
+import { s2aSkills } from '../utils/section2/section2a';
+import { s2bSkills } from '../utils/section2/section2b';
+import { s2cSkills } from '../utils/section2/section2c';
 
 import {s3aSkills} from '../utils/section3/section3a'
 import {s3bSkills} from '../utils/section3/section3b'
@@ -93,146 +92,86 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
             <button className="btn btn-primary mb-4" onClick={handleSkillStart}>Start Practicing!</button>
 
         <div className="mb-3">
-        <h3>Section 1: Basic Arithmetic Tricks</h3>
-        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <h3>Section 1: Basic Arithmetic Tricks</h3>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
         
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                Multiplication
-              </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-                <SectionSkills
-                  sXskills={s1aSkills}
-                  title={'Section 1a: Multiplication Tricks'}
-                  selectedSkill={selectedSkill}
-                  onSkillChange={(e) => {
-                    setSelectedSkill(e.target.value);
-                    setCurrentSection('section1a');
-                  }}
-                />
-              </div>
-            </div>
-          </div>
+            <PracticeAccordionSection 
+              title={'Multiplication'} section={"1"} index={"1"}
+              content={<SectionSkills
+                sXskills={s1aSkills} title={'Section 1a: Multiplication Tricks'} selectedSkill={selectedSkill}
+                onSkillChange={(e) => {
+                  setSelectedSkill(e.target.value);
+                  setCurrentSection('section1a');
+                }}/>}
+            />
 
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                Factoring
-              </button>
-            </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-              <Section1bSkills
-                    selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
-                    onSkillChange={(e) => {
-                        setSelectedSkill(e.target.value);
-                        setCurrentSection('section1b');
-                    }}
-                />   
-              </div>
-            </div>
-          </div>
-  
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                Mixed Number Arithmetic
-              </button>
-            </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-              <Section1cSkills
-                  selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
-                  onSkillChange={(e) => {
-                      setSelectedSkill(e.target.value);
-                      setCurrentSection('section1c');
-                  }}
-              />
-              </div>
-            </div>
-          </div>
+            <PracticeAccordionSection 
+              title={"Factoring"} section={"1"} index={"2"}
+              content={<SectionSkills
+                sXskills={s1bSkills} title={'Section 1b: Factoring'} selectedSkill={selectedSkill}
+                onSkillChange={(e) => {
+                    setSelectedSkill(e.target.value);
+                    setCurrentSection('section1b');
+                }}/>}
+            />
+
+            <PracticeAccordionSection 
+              title={"Mixed Number Arithmetic"} section={"1"} index={"3"}
+              content={<SectionSkills
+                sXskills={s1cSkills} title={'Section 1c: Mixed Numbers and Fractions'} selectedSkill={selectedSkill}
+                onSkillChange={(e) => {
+                    setSelectedSkill(e.target.value);
+                    setCurrentSection('section1c');
+                }}/>}
+            />
           
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                Remainder Tricks
-              </button>
-            </h2>
-            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-              <Section1dSkills
-                  selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
-                  onSkillChange={(e) => {
-                      setSelectedSkill(e.target.value);
-                      setCurrentSection('section1d');
-                  }}
-              />
-              </div>
-            </div>
+            <PracticeAccordionSection 
+              title={"Remainder Tricks"} section={"1"} index={"4"}
+              content={<SectionSkills
+                sXskills={s1dSkills} title={'Section 1d: Remainder Tricks'} selectedSkill={selectedSkill}
+                onSkillChange={(e) => {
+                    setSelectedSkill(e.target.value);
+                    setCurrentSection('section1d');
+                }}/>}
+            />
+
           </div>
-        </div>
         </div>
         
         <div className="mb-3">
         <h3>Section 2: Memorization</h3>
-        <div class="accordion accordion-flush" id="accordionFlushP2">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                Basic Memorization
-              </button>
-            </h2>
-            <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushP2">
-              <div class="accordion-body">
-              <Section2aSkills
-                selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
+          <div class="accordion accordion-flush" id="accordionFlushP2">
+
+            <PracticeAccordionSection 
+              title={"Basic Memorization"} section={"2"} index={"5"}
+              content={<SectionSkills
+                sXskills={s2aSkills} title={'Section 2a: Memorization'}selectedSkill={selectedSkill}
                 onSkillChange={(e) => {
                   setSelectedSkill(e.target.value);
                   setCurrentSection('section2a');
-                }}
-              />
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-                Memorization Applications
-              </button>
-            </h2>
-            <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushP2">
-              <div class="accordion-body">
-              <Section2bSkills
-                    selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
-                    onSkillChange={(e) => {
-                        setSelectedSkill(e.target.value);
-                        setCurrentSection('section2b');
-                    }}
-                />   
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
-                Series
-              </button>
-            </h2>
-            <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushP2">
-              <div class="accordion-body">
-              <Section2cSkills
-                  selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
-                  onSkillChange={(e) => {
-                      setSelectedSkill(e.target.value);
-                      setCurrentSection('section2c');
-                  }}
-              />
-              </div>
-            </div>
-          </div>
+                }}/>}
+            />
+
+            <PracticeAccordionSection 
+              title={"Memorization Applications"} section={"2"} index={"6"}
+              content={<SectionSkills
+                sXskills={s2bSkills} title={'Section 2b: Memorization Applications'} selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
+                onSkillChange={(e) => {
+                    setSelectedSkill(e.target.value);
+                    setCurrentSection('section2b');
+                }}/>}
+            />
+
+            <PracticeAccordionSection 
+              title={"Series"} section={"2"} index={"7"}
+              content={<SectionSkills
+                sXskills={s2cSkills} title={'Section 2c: Summation Formulas'} selectedSkill={selectedSkill} // Note the prop name change to reflect singular skill
+                onSkillChange={(e) => {
+                    setSelectedSkill(e.target.value);
+                    setCurrentSection('section2c');
+                }} />}
+            />
+
           </div>
         </div>
 
@@ -243,65 +182,37 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
           <h3>Section 3: Algebra + Geometry</h3>
           <div class="accordion accordion-flush" id="accordionFlushP3">
 
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
-                  Repeating Decimal Tricks
-                </button>
-              </h2>
-              <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushP3">
-                <div class="accordion-body">
-                    <SectionSkills 
-                      sXskills={s3aSkills}
-                      title={'Section 3a: Sum and Product of Roots of Polynomials'}
-                      selectedSkill={selectedSkill}
-                      onSkillChange={(e) => {
-                        setSelectedSkill(e.target.value);
-                        setCurrentSection('section3a');
-                    }}/>
-                </div>
-              </div>
-            </div>
+            <PracticeAccordionSection 
+              title={"Repeating Decimal Tricks"} section={"3"} index={"8"}
+              content={<SectionSkills 
+                sXskills={s3aSkills}
+                title={'Section 3a: Sum and Product of Roots of Polynomials'}
+                selectedSkill={selectedSkill}
+                onSkillChange={(e) => {
+                  setSelectedSkill(e.target.value);
+                  setCurrentSection('section3a');
+              }}/>}
+            />
 
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
-                  Questions on Divisors
-                </button>
-              </h2>
-              <div id="flush-collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionFlushP3">
-                <div class="accordion-body">
-                  <SectionSkills
-                    sXskills={s3bSkills}
-                    title={'Section 3b: Divisor tricks'}
-                    selectedSkill={selectedSkill}
-                    onSkillChange={(e) => {
-                      setSelectedSkill(e.target.value);
-                      setCurrentSection('section3b');
-                  }}/>
-                </div>
-              </div>
-            </div>
+            <PracticeAccordionSection 
+              title={"Questions on Divisors"} section={"3"} index={"9"}
+              content={<SectionSkills
+                sXskills={s3bSkills} title={'Section 3b: Divisor tricks'} selectedSkill={selectedSkill}
+                onSkillChange={(e) => {
+                  setSelectedSkill(e.target.value);
+                  setCurrentSection('section3b');
+              }}/>}
+            />
 
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
-                  Questions about Polynomials
-                </button>
-              </h2>
-              <div id="flush-collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushP3">
-                <div class="accordion-body">
-                  <SectionSkills
-                    sXskills={s3cSkills}
-                    title={'Section 3c: Polynomial tricks'}
-                    selectedSkill={selectedSkill}
-                    onSkillChange={(e) => {
-                      setSelectedSkill(e.target.value);
-                      setCurrentSection('section3c');
-                  }}/>
-                </div>
-              </div>
-            </div>         
+            <PracticeAccordionSection 
+              title={"Questions about Polynomials"} section={"3"} index={"10"}
+              content={<SectionSkills
+                sXskills={s3cSkills} title={'Section 3c: Polynomial tricks'} selectedSkill={selectedSkill}
+                onSkillChange={(e) => {
+                  setSelectedSkill(e.target.value);
+                  setCurrentSection('section3c');
+              }}/>}
+            />      
           </div>
         </div>
 
@@ -320,28 +231,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
                   setSelectedSkill(e.target.value);
                   setCurrentSection('section4a');
               }}/>}
-            />
-
-            {/* <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse11" aria-expanded="false" aria-controls="flush-collapse11">
-                  Change of Bases
-                </button>
-              </h2>
-              <div id="flush-collapse11" class="accordion-collapse collapse" data-bs-parent="#accordionFlushP4">
-                <div class="accordion-body">
-                    <SectionSkills 
-                      sXskills={s4aSkills}
-                      title={'Section 4a: Change of Bases'}
-                      selectedSkill={selectedSkill}
-                      onSkillChange={(e) => {
-                        setSelectedSkill(e.target.value);
-                        setCurrentSection('section4a');
-                    }}/>
-                </div>
-              </div>
-            </div> */}
-            
+            />            
           </div>
         </div>
         

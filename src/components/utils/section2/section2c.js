@@ -130,4 +130,12 @@ export const generator2c = {
     'infGeoSeries': infGeoSeries,
 
     }
-      
+export const s2cSkills = [
+    { value: 'firstmInts', label: 'Sum of first n integers' },
+    { value: 'firstmOdds', label: 'Sum of first n odd integers' },
+    { value: 'firstmEvens', label: 'Sum of first n even integers' },
+    { value: 'firstmSquares', label: 'Sum of first n squares' },
+    { value: 'firstmCubes', label: 'Sum of first n cubes' },
+    { value: 'arithmeticSeries', label: 'Arithmetic Series with common difference' },
+    //   { value: 'infGeoSeries', label: 'Infinite Geometric Series' },
+];

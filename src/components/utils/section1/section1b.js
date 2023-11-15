@@ -122,6 +122,14 @@ export function factor1a() {
     'differenceSquares': differenceSquares
   }
   
+  export const s1bSkills = [
+    { value: 'factor1a', label: ['(na)^2 + a'] },
+    { value: 'factor1b', label: ['a^2 + a'] },
+    { value: 'commonfactorpm', label: 'Common Factor RPM' },
+    { value: 'sumconsecutivesquares', label: 'Sum of Consecutive Squares' },
+    { value: 'differenceSquares', label: 'Difference of Squares' },
+]
+  
 
   
 
