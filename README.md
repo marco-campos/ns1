@@ -42,11 +42,8 @@ My goal is to have a webapp where to students can practice their number sense an
 - Platonic solis
 - pi and e approximations
 - distance and velocity conversions
-    - ***
 - conversions of distance, area and volume
-    - ****
 - fluid and weight conversions
-    - ****
 - celsius to fahrenheit
 - sum of alternating squares
 - fibonacci stuff
@@ -58,25 +55,16 @@ My goal is to have a webapp where to students can practice their number sense an
 - sides of a triangle
 - equilaterla triangle
 - solids formulas
-    - ***
-- Combinations and Permutations 
-    - Easy to implement.
 - Trig values
-    - *** 
 - Trig formulas
 - Graphs of Trig
 - parabola vertex
 - discriminant + roots
-- GCD LCM 
-    - *** important
 - sum of coefficients in an expansion.
-- sum/products of roots 
-    - *** very important, also for a math test.
 - units digit x^n
 - exponent rules
 - log rules
 - square root problems 
-    - ***
 - complex numbers
 - powers of i
 - function inverses
@@ -119,11 +107,7 @@ My goal is to have a webapp where to students can practice their number sense an
 ### Section 3: Algebra + Geometry
 - integral divisors
     - *** should probably implement this.
-- Combinations and Permutations 
-    - Easy to implement.
 - solids formulas
-- GCD LCM 
-    - *** important
 - sum of coefficients in an expansion.
 ### Section 4: Pre-calculus
 - Trig values

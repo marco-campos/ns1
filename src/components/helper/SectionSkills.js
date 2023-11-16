@@ -1,6 +1,7 @@
 import React from 'react';
+import TextDisplay from '../TextDisplay';
 
-const SectionSkills = ({ sXskills,title, selectedSkill, onSkillChange }) => {
+const SectionSkills = ({ sXskills,title, selectedSkill, onSkillChange, latex}) => {
     return (
       <fieldset className="p-3">
         <legend className="w-auto px-2">{title}</legend>
@@ -18,7 +19,7 @@ const SectionSkills = ({ sXskills,title, selectedSkill, onSkillChange }) => {
                   onChange={onSkillChange}
                 />
                 <label className="form-check-label" htmlFor={`skill-${skill.value}`}>
-                  {skill.label}
+                  {latex ? <TextDisplay text={skill.label} /> : skill.label }
                 </label>
               </div>
             </div>

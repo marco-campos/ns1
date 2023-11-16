@@ -39,7 +39,8 @@ const Lesson1d = () => {
                     <li className="list-group-item">
                         <p>Complex algebraic expressions divided by a number can be simplified using modular arithmetic. Simply take the remainder of each term and perform the arithmetic</p>
                         <p>Example:</p>
-                        <TextDisplay text={`(5^3 - 3 \\times 5^2) \\div 4 = (125 \\div 4 - (3 \\times 25) \\div 4) = \\text{ so the remainder is } 1 - 0 = 1`} />
+                        <TextDisplay text={`(5^3 - 3 \\times 5^2) \\div 4 = 1^3 -3 \\times 1^2 mod 4 = 1-3  mod 4= -2 mod 4 = 2 mod 4`} />
+                        <p>Here I used modular arithmetic notation.</p>
                     </li>
                 </ul>
             </div>

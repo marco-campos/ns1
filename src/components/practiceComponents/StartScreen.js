@@ -111,7 +111,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
             <PracticeAccordionSection 
               title={"Factoring"} section={"1"} index={"2"}
               content={<SectionSkills
-                sXskills={s1bSkills} title={'Section 1b: Factoring'} selectedSkill={selectedSkill}
+                sXskills={s1bSkills} title={'Section 1b: Factoring'} selectedSkill={selectedSkill} latex={true}
                 onSkillChange={(e) => {
                     setSelectedSkill(e.target.value);
                     setCurrentSection('section1b');
@@ -121,7 +121,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
             <PracticeAccordionSection 
               title={"Mixed Number Arithmetic"} section={"1"} index={"3"}
               content={<SectionSkills
-                sXskills={s1cSkills} title={'Section 1c: Mixed Numbers and Fractions'} selectedSkill={selectedSkill}
+                sXskills={s1cSkills} title={'Section 1c: Mixed Numbers and Fractions'} selectedSkill={selectedSkill} latex={true}
                 onSkillChange={(e) => {
                     setSelectedSkill(e.target.value);
                     setCurrentSection('section1c');
@@ -220,7 +220,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
             <PracticeAccordionSection 
               title={"Questions about Polynomials"} section={"3"} index={"11"}
               content={<SectionSkills
-                sXskills={s3cSkills} title={'Section 3c: Polynomial tricks'} selectedSkill={selectedSkill}
+                sXskills={s3cSkills} title={'Section 3c: Polynomial tricks'} selectedSkill={selectedSkill} latex={false}
                 onSkillChange={(e) => {
                   setSelectedSkill(e.target.value);
                   setCurrentSection('section3c');

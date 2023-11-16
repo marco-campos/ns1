@@ -123,11 +123,11 @@ export function factor1a() {
   }
   
   export const s1bSkills = [
-    { value: 'factor1a', label: ['(na)^2 + a'] },
-    { value: 'factor1b', label: ['a^2 + a'] },
-    { value: 'commonfactorpm', label: 'Common Factor RPM' },
-    { value: 'sumconsecutivesquares', label: 'Sum of Consecutive Squares' },
-    { value: 'differenceSquares', label: 'Difference of Squares' },
+    { value: 'factor1a', label: '(na)^2 + a' },
+    { value: 'factor1b', label: 'a^2 + a' },
+    { value: 'commonfactorpm', label: '\\text{Common Factor RPM}' },
+    { value: 'sumconsecutivesquares', label: '\\text{Sum of Consecutive Squares}' },
+    { value: 'differenceSquares', label: '\\text{Difference of Squares}' },
 ]
   
 
