@@ -52,11 +52,6 @@ const Footer = () => {
                 </a>
             </li>
             <li>
-                <a href="https://github.com/marco-campos" className="text-dark" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-github"></i> GitHub
-                </a>
-            </li>
-            <li>
               <a href="https://discord.gg/wUWwzbFw" className="text-dark" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-discord"></i> Discord Server
               </a>
