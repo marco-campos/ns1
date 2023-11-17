@@ -1,6 +1,6 @@
 # Number Sense Trainer
 
-Live link to the netlify app: [Number Sense Practice](https://numbersensetricks.netlify.app/)
+Live link to the netlify app: [Number Sense Practice](https://numbersense.netlify.app/)
 
 This project is largely inspired by [Bryant Heath's wonderful book](https://bryantheath.com/files/2018/04/Heath_NSTricks_revA.pdf).
 
@@ -41,7 +41,6 @@ My goal is to have a webapp where to students can practice their number sense an
 - Roman Numeral Arithmetic
 - Platonic solis
 - pi and e approximations
-- distance and velocity conversions
 - conversions of distance, area and volume
 - fluid and weight conversions
 - celsius to fahrenheit
@@ -73,14 +72,8 @@ My goal is to have a webapp where to students can practice their number sense an
 - probability/odds
 - sets 
     - *** Might be hard.
-- Changing bases
-    - *** Probably not super hard, will be a bit annoying I think though.
-    - converting to, from and between
-- converting decimals
 - bases with operations
 - other bases stuff
-- repeating decimals
-    - *** super important. very easy to implement, several questions too with simple formulas.
 - modular arithmetic
 - factorial sums
 - wilson's theorem
@@ -98,7 +91,6 @@ My goal is to have a webapp where to students can practice their number sense an
 ### Section 1: Arithmetic
 ### Section 2: Memorization
 - square root problems 
-- distance and velocity conversions
 - conversions of distance, area and volume
 - fluid and weight conversions
 - fibonacci stuff

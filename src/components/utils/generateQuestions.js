@@ -6,6 +6,7 @@ import { generator1e } from './section1/section1e'
 import { generator2a } from './section2/section2a'
 import { generator2b } from './section2/section2b'
 import { generator2c } from './section2/section2c'
+import { generator2d } from './section2/section2d'
 import { generator3a } from './section3/section3a';
 import { generator3b } from './section3/section3b';
 import { generator3c } from './section3/section3c';
@@ -25,6 +26,7 @@ export function generateQuestionsWithSolutions(numberOfQuestions) {
   const generators2a =Object.values(generator2a)
   const generators2b =Object.values(generator2b)
   const generators2c =Object.values(generator2c)
+  const generators2d =Object.values(generator2d)
 
   const generators3a =Object.values(generator3a)
   const generators3b =Object.values(generator3b)
@@ -36,7 +38,7 @@ export function generateQuestionsWithSolutions(numberOfQuestions) {
   //const generators = [axaOverb]
 
   const generators1 = [...generators1a, ...generators1b, ...generators1c, ...generators1d, ...generators1e];
-  const generators2 = [...generators2a, ...generators2b, ...generators2c]
+  const generators2 = [...generators2a, ...generators2b, ...generators2c, ...generators2d]
   const generators3 = [...generators3a, ...generators3b, ...generators3c, ...generators3d]
   const generators4 = [...generators4a]
 
@@ -70,6 +72,8 @@ export const determineGeneratorObject = (skillToPractice) => {
       return generator2b
     case 'section2c':
       return generator2c
+    case 'section2d':
+      return generator2d
     case 'section3a':
       return generator3a
     case 'section3b':
