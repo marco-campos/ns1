@@ -1,0 +1,60 @@
+.button-input-container {
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .answer-display {
+    margin-bottom: 10px;
+    font-size: 6vw
+  }
+  
+  .button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 0 10px;
+  }
+  
+  .calculator-button {
+    padding: 4vw; /* Adjust size based on viewport width */
+    font-size: 6vw; /* Adjust font size based on viewport width */
+  }
+  
+  .control-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .control-button {
+    padding: 3vw; /* Adjust size for control buttons */
+    font-size: 5vw; /* Adjust font size for control buttons */
+  }
+  
+  .space-button {
+    margin-right: 20px; /* Additional margin for space button */
+  }
+  
+  .arrow-button {
+    margin-right: 0;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 3vw; /* Adjust size for submit button */
+    margin-top: 10px;
+    font-size: 5vw; /* Adjust font size for submit button */
+  }
+  
+  /* Media query for larger screens */
+  @media (min-width: 600px) {
+    .calculator-button, .control-button, .submit-button {
+      padding: 20px; /* Fixed padding for larger screens */
+      font-size: 1.5rem; /* Fixed font size for larger screens */
+    }
+  
+    .control-button {
+      margin-right: 10px; /* Adjust margin for larger screens */
+    }
+  }
+  
