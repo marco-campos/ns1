@@ -77,6 +77,7 @@ const GameScreen = ({ endGame, timeLimit, questionLimit, endPractice }) => {
   
     const updatedScore = matched ? score + 5 : score - 9;
     setAnswers([...answers, { ...currentQuestion, userInput: inputString.trim(), matched }]);
+    console.log(answers);
     setScore(updatedScore);
     setQuestionCount(prevCount => prevCount + 1);
     setUserInput(''); // Clear input field
