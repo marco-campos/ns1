@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { supabase } from '../../config';
 
 import PracticeAccordionSection from '../helper/PracticeAccordionSection';
 import SectionSkills from '../helper/SectionSkills';
@@ -25,6 +26,31 @@ import {s4aSkills} from '../utils/section4/section4a'
 
 
 const StartScreen = ({ startGame, startSkillPractice }) => {
+  const [highScore, setHighScore] = useState(null);
+
+  const fecthUserHighScore = async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      
+      if (user) {
+        console.log(user.user_metadata.full_name + " is signed in with id: " + user.id);
+        const { data, error } = await supabase
+          .from('users')
+          .select('high_score')
+          .eq('uuid', user.id)
+          .single();
+        
+        if (error) {
+          console.error('Error fetching user data:', error);
+        } else if (data) {
+          setHighScore(data.high_score);
+        }
+      }
+    };
+  
+    useEffect(() => {
+      fecthUserHighScore();
+    }, [fecthUserHighScore]);
+
   const [timeOption, setTimeOption] = useState(600); // Default 10 minutes
   const [questionOption, setQuestionOption] = useState(10); // Default 10 questions
   const [selectedSkill, setSelectedSkill] = useState('foil2x2'); // For skill practice, singular
@@ -64,6 +90,7 @@ const StartScreen = ({ startGame, startSkillPractice }) => {
             <li>-9 points for every question that is incorrect or skipped</li>
           </ul>
           <p className="card-text">Mixed numbers should be typed as "a b/c" (Notice the space!) with "a" being the whole number and "b/c" being the fraction in reduced form. Improper fractions must be in reduced form.</p>
+          <p><b><i>High Score: </i>{highScore?? "-"}</b></p>
           <form className="mb-3">
         <div className="mb-3">
           <label htmlFor="time-select" className="form-label">Choose a time limit:</label>
